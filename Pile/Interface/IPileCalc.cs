@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SDD.Interface
 {
-    /// <summary>
-    /// Interface used for creating a new pile object
-    /// </summary>
-    public interface IPileCalc
+	/// <summary>
+	/// Interface used for creating a new pile object
+	/// </summary>
+	public interface IPileCalc
     {
         IEnumerable<int> Éléments { get; }
         IEnumerable<int> ÉlémentsInversés { get; }
