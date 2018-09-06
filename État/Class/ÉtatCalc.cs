@@ -45,7 +45,8 @@ namespace SDD.Class
 
         public ÉtatCalc(string enTexte)
         {
-
+            mPile = new PileCalcListe();
+            mAccumuleur = new Accumuleur();
         }
 
 		//Private Properties of the class//
@@ -70,17 +71,24 @@ namespace SDD.Class
 
         public IÉtatCalc Cloner()
         {
-			return new ÉtatCalc(mPile, mAccumuleur);
+			return new ÉtatCalc(EnTexte());
 		}
 
 		public void Décumuler() => mAccumuleur.Décumuler();
 
         public void Enter(bool facultatif = false)
         {
-            if (Accumulateur is null && facultatif)
-                throw new AccumuleurVideException();
-            else
-                Push((int)Accumulateur);
+            try
+            {
+                if (Accumulateur is null && facultatif)
+                    throw new AccumuleurVideException();
+
+                mPile.Push((int)mAccumuleur.Extraire());
+            }
+            catch(AccumuleurVideException)
+            {
+
+            }
         }
 
         public string EnTexte(string séparateur = "  ")

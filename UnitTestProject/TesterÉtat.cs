@@ -371,8 +371,7 @@ namespace SDD
         [TestMethod]
         public void _43a_NewEnTexteExact()
         {
-            foreach (var enTexte in new[] {
-                "", null, "10?", "10", "-99", "10  20  30", "10  20  30?",  "-10  -20  30?"  })
+            foreach (var enTexte in new[] {"", null, "10?", "10", "-99", "10  20  30", "10  20  30?",  "-10  -20  30?"  })
             {
                 Vérifier(new ÉtatCalc(enTexte), enTexte ?? "");
             }
