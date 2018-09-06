@@ -13,7 +13,10 @@ namespace SDD.Class
         /// <param name="listeÉléments"></param>
         public PileCalcListe(IEnumerable<int> listeÉléments = null)
         {
-            ListeÉléments = (listeÉléments != null) ? new List<int>(listeÉléments) : new List<int>();
+            ListeÉléments = new List<int>();
+
+            if (listeÉléments != null)
+                ListeÉléments.AddRange(listeÉléments);
         }
 
         /// <summary>

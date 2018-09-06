@@ -9,17 +9,38 @@ namespace SDD.Class
         //Constructors//
         public ÉtatCalc(IPileCalc pile = null, IAccumuleur acc = null)
         {
-			mAccumuleur = acc;
-			mPile = pile;
+            if (acc != null)
+                mAccumuleur = (Accumuleur)acc;
+            else
+                mAccumuleur = new Accumuleur();
+
+            if (pile != null)
+                mPile = (PileCalcListe)pile;
+            else
+                mPile = new PileCalcListe();
         }
 
         public ÉtatCalc(int? accumulateur, params int[] pile)
         {
+            if (pile != null)
+                mPile = new PileCalcListe(pile);
+            else
+                mPile = new PileCalcListe();
+
+            if (accumulateur != null)
+                mAccumuleur = new Accumuleur(accumulateur);
+            else
+                mAccumuleur = new Accumuleur();
         }
 
         public ÉtatCalc(IEnumerable<int> pile, int? accumulateur = null)
         {
+            mPile = new PileCalcListe(pile);
 
+            if (accumulateur != null)
+                mAccumuleur = new Accumuleur(accumulateur);
+            else
+                mAccumuleur = new Accumuleur();
         }
 
         public ÉtatCalc(string enTexte)
@@ -27,17 +48,16 @@ namespace SDD.Class
 
         }
 
-		//Private Properties of the class
-		private IAccumuleur mAccumuleur { get; set; }
+		//Private Properties of the class//
+		private Accumuleur mAccumuleur { get; set; }
 
-		private IPileCalc mPile { get; set; }
+		private PileCalcListe mPile { get; set; }
 
-		//Public Properties of the class
 		public int? Accumulateur => mAccumuleur.Valeur;
 
-        public IEnumerable<int> Pile => mPile.ÉlémentsInversés;
+        public IEnumerable<int> Pile => mPile.Éléments;
 
-		public bool EstVide => throw new NotImplementedException();
+        public bool EstVide => (mAccumuleur.EstVide && mPile.EstVide) ? true : false;
 
 		//A reverifier. Possibilite de changer Dessus pour un type int nullable
 		public int Dessus =>
@@ -57,12 +77,17 @@ namespace SDD.Class
 
         public void Enter(bool facultatif = false)
         {
-            throw new NotImplementedException();
+            if (Accumulateur is null && facultatif)
+                throw new AccumuleurVideException();
+            else
+                Push((int)Accumulateur);
         }
 
         public string EnTexte(string séparateur = "  ")
         {
-            throw new NotImplementedException();
+            string pileContent = mPile.EnTexte(séparateur);
+            string stateContent = (mAccumuleur.Accumulation != String.Empty) ?mAccumuleur.Accumulation + "?" : String.Empty;
+            return (stateContent != String.Empty) ? String.Join(séparateur, pileContent, stateContent).Trim() : pileContent;
         }
 
         public int Pop()
@@ -100,5 +125,7 @@ namespace SDD.Class
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString() => EnTexte();
     }
 }
