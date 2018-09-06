@@ -2,23 +2,20 @@
 using SDD.Interface;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculatrice.Class
 {
-    class ÉtatCalc : IÉtatCalc
+	class ÉtatCalc : IÉtatCalc
     {
         //Constructors//
         public ÉtatCalc(IPileCalc pile = null, IAccumuleur acc = null)
         {
-
+			mAccumuleur = acc;
+			mPile = pile;
         }
 
         public ÉtatCalc(int? accumulateur, params int[] pile)
         {
-
         }
 
         public ÉtatCalc(IEnumerable<int> pile, int? accumulateur = null)
@@ -31,29 +28,33 @@ namespace Calculatrice.Class
 
         }
 
+		//Private Properties of the class
+		private IAccumuleur mAccumuleur { get; set; }
 
-        public int? Accumulateur => throw new NotImplementedException();
+		private IPileCalc mPile { get; set; }
 
-        public IEnumerable<int> Pile => throw new NotImplementedException();
+		//Public Properties of the class
+		public int? Accumulateur => mAccumuleur.Valeur;
 
-        public bool EstVide => throw new NotImplementedException();
+        public IEnumerable<int> Pile => mPile.ÉlémentsInversés;
 
-        public int Dessus => throw new NotImplementedException();
+		public bool EstVide => throw new NotImplementedException();
 
-        public void Accumuler(char chiffre)
-        {
-            throw new NotImplementedException();
-        }
+		//A reverifier. Possibilite de changer Dessus pour un type int nullable
+		public int Dessus =>
+			(mAccumuleur.Valeur != null)? (int)mAccumuleur.Valeur :
+			(mPile.Dessus != 0)? mPile.Dessus:
+			throw new PileVideException();
+
+		//Methods inherited from the accumulator and pile driver
+		public void Accumuler(char chiffre) => mAccumuleur.Accumuler(chiffre);
 
         public IÉtatCalc Cloner()
         {
-            throw new NotImplementedException();
-        }
+			return new ÉtatCalc(mPile, mAccumuleur);
+		}
 
-        public void Décumuler()
-        {
-            throw new NotImplementedException();
-        }
+		public void Décumuler() => mAccumuleur.Décumuler();
 
         public void Enter(bool facultatif = false)
         {
@@ -67,17 +68,23 @@ namespace Calculatrice.Class
 
         public int Pop()
         {
-            throw new NotImplementedException();
+			if (mAccumuleur.Valeur != null)
+				return (int)mAccumuleur.Extraire();
+			else
+				return mPile.Pop();
         }
 
         public void Push(int nombre)
         {
-            throw new NotImplementedException();
+			if (mAccumuleur.Valeur != null)
+				mPile.Push((int)mAccumuleur.Extraire());
+
+			mPile.Push(nombre);
         }
 
         public void Reset(IEnumerable<int> pile = null, int? accumulateur = null)
         {
-            throw new NotImplementedException();
+
         }
 
         public void Reset(int? accumulateur, params int[] pile)
