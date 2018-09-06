@@ -52,6 +52,7 @@
     <Compile Include="TesterPile.cs" />
     <Compile Include="TesterPile_Liste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesterÉtat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

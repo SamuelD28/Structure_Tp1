@@ -1,11 +1,10 @@
-﻿using Calculatrice.Interface;
-using SDD.Interface;
+﻿using SDD.Interface;
 using System;
 using System.Collections.Generic;
 
-namespace Calculatrice.Class
+namespace SDD.Class
 {
-	class ÉtatCalc : IÉtatCalc
+	public class ÉtatCalc : IÉtatCalc
     {
         //Constructors//
         public ÉtatCalc(IPileCalc pile = null, IAccumuleur acc = null)

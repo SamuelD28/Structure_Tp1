@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SDD.Interface;
 
-namespace Calculatrice.Interface
+namespace SDD.Interface
 {
     public interface IÉtatCalc
     {

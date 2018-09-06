@@ -169,7 +169,7 @@ namespace SDD.Utility
             {
                 return Convert.ToInt32(str);
             }
-            catch(OverflowException e)
+            catch(OverflowException)
             {
                 return ExtractInt32(str.Substring(0, str.Length - 1));
             }
