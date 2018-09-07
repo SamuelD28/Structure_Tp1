@@ -1,6 +1,7 @@
 ﻿using SDD.Interface;
 using System;
 using System.Collections.Generic;
+using static SDD.Utility.StringExtensions;
 
 namespace SDD.Class
 {
@@ -45,8 +46,17 @@ namespace SDD.Class
 
         public ÉtatCalc(string enTexte)
         {
-            mPile = new PileCalcListe();
+            mPile = new PileCalcListe(enTexte.ParsePile());
             mAccumuleur = new Accumuleur();
+			
+			string[] pile =  enTexte.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			for(int i = 0; i < pile.Length ; i++)
+			{
+				string element = (string)pile.GetValue(i);
+
+				if (element.Contains("?"))
+					mAccumuleur.Reset(element.Trim('?'));
+			}
         }
 
 		//Private Properties of the class//
@@ -116,24 +126,51 @@ namespace SDD.Class
 
         public void Reset(IEnumerable<int> pile = null, int? accumulateur = null)
         {
+			mAccumuleur.Reset(accumulateur);
 
+			if(accumulateur > 0 || accumulateur is null)
+				mPile.Reset(pile);
         }
 
         public void Reset(int? accumulateur, params int[] pile)
         {
-            throw new NotImplementedException();
+			mAccumuleur.Reset(accumulateur);
+			mPile.Reset(pile);
         }
 
         public void Reset(IPileCalc pile, IAccumuleur acc = null)
         {
-            throw new NotImplementedException();
+			mPile.Reset(pile.Éléments);
+			mAccumuleur.Reset(acc.Valeur);
         }
 
         public void Reset(string enTexte)
         {
-            throw new NotImplementedException();
+
         }
 
         public override string ToString() => EnTexte();
     }
+
+	public static class ÉtatCalcExtensions
+	{
+		public static IEnumerable<int> ParsePile(this string str)
+		{
+			string[] pileStr = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			List<int> pileInt = new List<int>();
+
+			for (int i = 0; i < pileStr.Length; i++)
+			{
+				string element = (string)pileStr.GetValue(i);
+
+				if (element.Contains("-"))
+					pileInt.Add(Convert.ToInt32(element.Trim('-')));
+				else
+					pileInt.Add(Convert.ToInt32(element.Trim('?')));
+			}
+
+			return pileInt;
+		}
+	}
+
 }
