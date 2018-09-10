@@ -344,8 +344,7 @@ namespace SDD
         [TestMethod]
         public void _42b_ResetEnTexteTolérant()
         {
-            foreach (var enTexteTolérant in new[] {
-                "   ", " 10? ", " 10 ", " 10 20   30 ", " 10 20   30? " })
+            foreach (var enTexteTolérant in new[] {"   ", " 10? ", " 10 ", " 10 20   30 ", " 10 20   30? " })
             {
                 var enTexte = String.Join("  ", enTexteTolérant.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
                 var état = NewÉtat();
@@ -357,13 +356,11 @@ namespace SDD
         [TestMethod]
         public void _42c_ResetEnTexteErroné()
         {
-            foreach (var enTexte in new[] {
-            ",", "10? 20", "10.20", "-10?", "10,20", "999999999999999999999999999999999999999999999"})
+            foreach (var enTexte in new[] {",", "10? 20", "10.20", "-10?", "10,20", "999999999999999999999999999999999999999999999"})
             {
                 var état = NewÉtat("40", 10, 20);
                 Vérifier(état, "10  20  40?");
-                ThrowsException<ArgumentException>(
-                    ()=>état.Reset(enTexte), $"'{enTexte}' devrait être erroné!");
+                ThrowsException<ArgumentException>(()=>état.Reset(enTexte), $"'{enTexte}' devrait être erroné!");
                 Vérifier(état, "10  20  40?");
             }
         }
@@ -391,11 +388,9 @@ namespace SDD
         [TestMethod]
         public void _43c_NewEnTexteErroné()
         {
-            foreach (var enTexte in new[] {
-            ",", "10? 20", "10.20", "-10?", "10,20", "999999999999999999999999999999999999999999999"})
+            foreach (var enTexte in new[] {",", "10? 20", "10.20", "-10?", "10,20", "999999999999999999999999999999999999999999999"})
             {
-                ThrowsException<ArgumentException>(
-                    () => new ÉtatCalc(enTexte), $"'{enTexte}' devrait être erroné!");
+                ThrowsException<ArgumentException>(() => new ÉtatCalc(enTexte), $"'{enTexte}' devrait être erroné!");
             }
         }
 

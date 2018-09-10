@@ -46,17 +46,11 @@ namespace SDD.Class
 
         public ÉtatCalc(string enTexte)
         {
-            mPile = new PileCalcListe(enTexte.ParsePile());
-            mAccumuleur = new Accumuleur();
-			
-			string[] pile =  enTexte.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-			for(int i = 0; i < pile.Length ; i++)
-			{
-				string element = (string)pile.GetValue(i);
+			if (!enTexte.IsStateStringOkay())
+				throw new ArgumentException();
 
-				if (element.Contains("?"))
-					mAccumuleur.Reset(element.Trim('?'));
-			}
+            mPile = new PileCalcListe(enTexte.ParsePile());
+            mAccumuleur = new Accumuleur(enTexte.ParseCumulator());
         }
 
 		//Private Properties of the class//
@@ -88,17 +82,11 @@ namespace SDD.Class
 
         public void Enter(bool facultatif = false)
         {
-            try
-            {
-                if (Accumulateur is null && facultatif)
+                if (Accumulateur is null && !facultatif)
                     throw new AccumuleurVideException();
 
-                mPile.Push((int)mAccumuleur.Extraire());
-            }
-            catch(AccumuleurVideException)
-            {
-
-            }
+				if(Accumulateur  != null)
+					mPile.Push((int)mAccumuleur.Extraire());
         }
 
         public string EnTexte(string séparateur = "  ")
@@ -146,7 +134,10 @@ namespace SDD.Class
 
         public void Reset(string enTexte)
         {
+			if (!enTexte.IsStateStringOkay())
+				throw new ArgumentException();
 
+			Reset(enTexte.ParsePile(), enTexte.ParseCumulator());
         }
 
         public override string ToString() => EnTexte();
@@ -154,23 +145,70 @@ namespace SDD.Class
 
 	public static class ÉtatCalcExtensions
 	{
+		public static bool  IsStateStringOkay(this string str)
+		{
+
+			if (str != null)
+			{
+				string[] pileStr = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+				for (int i = 0; i < pileStr.Length; i++)
+				{
+					string element = pileStr.GetValue(i).ToString();
+
+					if (element.Length > 10)
+						return false;
+					else if (element.Contains("?") && element.Contains("-"))
+						return false;
+					else if (element.Contains("?") && i == 0 && pileStr.Length > 1)
+						return false;
+					else if (!element.IsNumberSyntaxOkay(true, new char[] { ',', '.' }))
+						return false;
+				}
+			}
+			return true;
+		}
+
 		public static IEnumerable<int> ParsePile(this string str)
 		{
-			string[] pileStr = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 			List<int> pileInt = new List<int>();
 
+			if (str is null)
+				return pileInt;
+
+			string[] pileStr = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 			for (int i = 0; i < pileStr.Length; i++)
 			{
 				string element = (string)pileStr.GetValue(i);
 
 				if (element.Contains("-"))
-					pileInt.Add(Convert.ToInt32(element.Trim('-')));
-				else
-					pileInt.Add(Convert.ToInt32(element.Trim('?')));
+					pileInt.Add(Convert.ToInt32(element));
+				else if (element.IsNumberSyntaxOkay(false))
+					pileInt.Add(Convert.ToInt32(element));
 			}
 
 			return pileInt;
 		}
+
+		public static int? ParseCumulator(this string str)
+		{
+			int? cumulatorValue = null;
+
+			if (str is null)
+				return cumulatorValue;
+
+			string[] pile = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			for (int i = 0; i < pile.Length; i++)
+			{
+				string element = (string)pile.GetValue(i);
+
+				if (element.Contains("?"))
+					cumulatorValue = Convert.ToInt32(element.Trim('?'));
+			}
+
+			return cumulatorValue; 
+		}
+
 	}
 
 }
