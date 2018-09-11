@@ -1,3 +1,5 @@
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CoreCompileInputs.cache
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -12,8 +14,6 @@
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Calculatrice.exe.config
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csprojAssemblyReference.cache
-\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CoreCompileInputs.cache
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CopyComplete
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.pdb

@@ -1,6 +1,5 @@
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\bin\Debug\CalculatriceLib.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\bin\Debug\CalculatriceLib.pdb
-\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.csprojAssemblyReference.cache
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.csproj.CoreCompileInputs.cache
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.pdb

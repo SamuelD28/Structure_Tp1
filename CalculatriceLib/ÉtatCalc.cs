@@ -60,12 +60,12 @@ namespace SDD.Class
         /// <summary>
         /// Cumulator Driver
         /// </summary>
-        private Accumuleur mAccumuleur { get; set; }
+        protected Accumuleur mAccumuleur { get; set; }
 
         /// <summary>
         /// Pile Driver
         /// </summary>
-        private PileCalcListe mPile { get; set; }
+        protected PileCalcListe mPile { get; set; }
 
         /// <summary>
         /// Contains the cumulator value
@@ -230,10 +230,20 @@ namespace SDD.Class
                 for (int i = 0; i < strArray.Length; i++)
                 {
                     string element = strArray.GetValue(i).ToString();
-                    return (element.Length > 10) ? false :
-                            (element.Contains("?") && element.Contains("-")) ? false :
-                            (element.Contains("?") && i == 0 && strArray.Length > 1) ? false :
-                            (!element.IsNumberSyntaxOkay(true, new char[] { ',', '.' })) ? false : true;
+
+
+                    if (element.Contains("?") && element.Contains("-"))
+                        return false;
+                    else if (element.Contains("?") && i == 0 && strArray.Length > 1)
+                        return false;
+                    else if (!element.IsNumberSyntaxOkay(true, new char[] { ',', '.' }))
+                        return false;
+                    else
+                    {
+                        int result;
+                        Int32.TryParse(element.Trim(new char[]{',', '?'}), out result);
+                        if (result == 0) return false;
+                    }
                 }
             }
             return true;

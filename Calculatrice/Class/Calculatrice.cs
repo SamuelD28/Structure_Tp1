@@ -1,46 +1,29 @@
 ﻿using SDD.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SDD.Class
 {
     public class Calculatrice : ÉtatCalc, ICalculatrice
     {
-        public Calculatrice(IPileCalc pile = null, IAccumuleur acc = null)
-        {
+        public Calculatrice(IPileCalc pile = null, IAccumuleur acc = null) : base(pile, acc) { }
 
-        }
+        public Calculatrice(int? accumulateur, params int[] pile) : base(accumulateur, pile) { }
 
-        public Calculatrice(int? accumulateur, params int[] pile)
-        {
+        public Calculatrice(IEnumerable<int> pile, int? accumulateur = null) : base(pile, accumulateur) { }
 
-        }
+        public Calculatrice(string enTexte) : base(enTexte) { }
 
-        public Calculatrice(IEnumerable<int> pile, int? accumulateur = null)
-        {
+        public string Accumulation => mAccumuleur.Accumulation;
 
-        }
+        public IEnumerable<object> Éléments => Pile.Cast<object>().ToList();
 
-        public Calculatrice(string enTexte)
-        {
+        public object Résultat => Dessus;
 
-        }
+        public new ICalculatrice Cloner() => throw new NotImplementedException();
 
-        public string Accumulation => throw new NotImplementedException();
-
-        public IEnumerable<object> Éléments => throw new NotImplementedException();
-
-        public object Résultat => throw new NotImplementedException();
-
-        public new ICalculatrice Cloner()
-        {
-            throw new NotImplementedException();
-        }
-
-        public new string EnTexte(string séparateur = "  ")
-        {
-            throw new NotImplementedException();
-        }
+        public new string EnTexte(string séparateur = "  ") => throw new NotImplementedException();
 
         public void Exécuter(IEnumerable<CalcCommande> commandes)
         {
@@ -57,14 +40,8 @@ namespace SDD.Class
             throw new NotImplementedException();
         }
 
-        public bool PeutExécuter(CalcCommande commande)
-        {
-            throw new NotImplementedException();
-        }
+        public bool PeutExécuter(CalcCommande commande) => true;
 
-        public new void Reset(string enTexte = "")
-        {
-            throw new NotImplementedException();
-        }
+        public new void Reset(string enTexte = "") => Reset(enTexte);
     }
 }
