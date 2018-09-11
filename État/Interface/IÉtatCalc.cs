@@ -12,7 +12,7 @@ namespace SDD.Interface
         int? Accumulateur { get; }
         IEnumerable<int> Pile { get; }
         bool EstVide { get; }
-        int Dessus { get; }
+        int? Dessus { get; }
 
         //Méthode non-modifiantes
         IÉtatCalc Cloner();
