@@ -84,6 +84,9 @@ namespace SDD.Utility
 			BackgroundColor = backgroundColor;
 		}
 		#endregion
+
+
+
 	}
 
 	/// <summary>
@@ -115,7 +118,7 @@ namespace SDD.Utility
 		/// <param name="str"></param>
 		/// <param name="nullAccepted">Pass true if null are an accepted format</param>
 		/// <returns></returns>
-		public static bool IsNumberSyntaxOkay(this string str, bool nullAccepted, char [] prohibitedChar=null)
+		public static bool IsNumberSyntaxOkay(this string str, bool nullAccepted, char[] prohibitedChar = null)
 		{
 			if ((str == null && nullAccepted) || str.ContainsProhibitedChar(prohibitedChar))
 				return true;
@@ -129,9 +132,9 @@ namespace SDD.Utility
 		/// <param name="str"></param>
 		/// <param name="prohibitedChar">List of prohibited char. If null, the default list is used</param>
 		/// <returns></returns>
-		public static bool ContainsProhibitedChar(this string str, char [] prohibitedChar)
+		public static bool ContainsProhibitedChar(this string str, char[] prohibitedChar)
 		{
-			if(prohibitedChar is null)
+			if (prohibitedChar is null)
 			{
 				if (str.IndexOfAny(mprohibitedChar) == -1)
 					return true;
@@ -178,6 +181,13 @@ namespace SDD.Utility
 			}
 		}
 
+		public static string[] ParseStringToArray(this string str, char[] separator)
+		{
+			if (str != null)
+				return str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			else
+				return null;
+		}
 	}
 
 	/// <summary>
