@@ -65,7 +65,7 @@ namespace SDD.Class
         /// <summary>
         /// Pile Driver
         /// </summary>
-        protected PileCalcListe mPile { get; set; }
+        public PileCalcListe mPile { get; set; }
 
         /// <summary>
         /// Contains the cumulator value
@@ -83,12 +83,12 @@ namespace SDD.Class
         public bool EstVide => (mAccumuleur.EstVide && mPile.EstVide);
 
         /// <summary>
-        /// Returns the cumulato value or the first element inside the pile stack
+        /// Returns the cumulator value or the first element inside the pile stack
         /// </summary>
-        public int? Dessus => DessusÉtat();
+        public int? Dessus => (Accumulateur != null) ? Accumulateur: (Pile != null) ? mPile.Dessus : throw new PileVideException();
 
         /// <summary>
-        /// Methods that stack a new number inside the pile driver
+        /// Methods that stack a new number inside thye cumulator value
         /// </summary>
         /// <param name="chiffre"></param>
         public void Accumuler(char chiffre) => mAccumuleur.Accumuler(chiffre);
@@ -109,15 +109,6 @@ namespace SDD.Class
         /// </summary>
         /// <returns></returns>
         public override string ToString() => EnTexte();
-
-        /// <summary>
-        /// Mehods that return the correct value to the Dessus property
-        /// </summary>
-        /// <returns></returns>
-        private int? DessusÉtat()
-        {
-            return (Accumulateur != null) ? Accumulateur : (Pile != null) ? mPile.Dessus : throw new PileVideException();
-        }
 
         /// <summary>
         /// Method that add the cumulator value to the pile stack

@@ -22,7 +22,7 @@ namespace SDD.Class
         /// <summary>
         /// Property that stores a list of int value passed to this class
         /// </summary>
-        private List<int> ListeÉléments { get; set; }
+        public List<int> ListeÉléments { get; set; }
 
         /// <summary>
         /// Property that returns the values stored inside the ListeÉlément property
@@ -81,7 +81,6 @@ namespace SDD.Class
         public void Push(int nombre)
         {
             ListeÉléments.Add(nombre);
-            Clear();
 		}
 
         /// <summary>

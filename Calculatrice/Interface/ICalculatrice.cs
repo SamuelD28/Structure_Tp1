@@ -11,7 +11,6 @@ namespace SDD.Interface
         string Accumulation { get; }
         IEnumerable<object> Éléments { get; }
         object Résultat { get; }
-
         bool PeutExécuter(CalcCommande commande);
         string EnTexte(string séparateur = "  ");
         ICalculatrice Cloner();
@@ -30,12 +29,12 @@ namespace SDD.Interface
 
     public enum CalcCommande
     {
-        __0 = '0', __1 = '1', __ = '2', __3 = '3', _4 = '4',
-        __5 = '5', __6 = '6', __7 = '7', __8='8', __9 = '9',
+        __0 = '0', __1 = '1', __2 = '2', __3 = '3', __4 = '4',
+        __5 = '5', __6 = '6', __7 = '7', __8 = '8', __9 = '9',
 
-        EntrerObligatoire = 'e', EntrerFacultatif = ' ', Backspace='b',
+        EntrerObligatoire = 'e', EntrerFacultatif = ' ', Backspace = 'b',
 
-        Addition = '+', Soustraction='-', Multiplication = '*', DivisionEntière='\\', Modulo ='%',
+        Addition = '+', Soustraction = '-', Multiplication = '*', DivisionEntière = '\\', Modulo = '%',
 
         Négation = 'n', Carré = '²',
 
