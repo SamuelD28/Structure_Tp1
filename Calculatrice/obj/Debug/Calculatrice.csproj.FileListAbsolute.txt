@@ -1,0 +1,10 @@
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\bin\Debug\Calculatrice.exe.config
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\bin\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\bin\Debug\Calculatrice.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\bin\Debug\CalculatriceLib.dll
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\bin\Debug\CalculatriceLib.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CopyComplete
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb
