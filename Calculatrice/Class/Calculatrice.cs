@@ -57,6 +57,7 @@ namespace SDD.Class
                         Décumuler();
                         break;
                     case CalcCommande.Addition:
+						HandleAdditionCommand();
                         break;
                     case CalcCommande.Soustraction:
                         break;
@@ -70,6 +71,7 @@ namespace SDD.Class
 						HandleNegationCommand();
                         break;
                     case CalcCommande.Carré:
+						HandleSquareCommand();
                         break;
                     case CalcCommande.Dupliquer:
                         HandleDuplicateCommand();
@@ -116,9 +118,54 @@ namespace SDD.Class
 
         public bool PeutExécuter(CalcCommande commande) => true;
 
+		private void HandleAdditionCommand()
+		{
+			if (EstVide || ListeÉléments.Count <= 1) throw new PileInsuffisanteException();
+
+			Push();
+
+			int result = ListeÉléments[ListeÉléments.Count - 1] + ListeÉléments[ListeÉléments.Count - 2];
+
+			if (result >= Int32.MaxValue || result <= Int32.MinValue) throw new OverflowException();
+
+			Pop();
+			ListeÉléments[ListeÉléments.Count - 1] = result;
+		}
+
+		private void HandleSquareCommand()
+		{
+			if (EstVide) throw new PileInsuffisanteException();
+
+			int dessus =(int)(Math.Round(Math.Pow((int)Dessus, 2)));
+
+			if (dessus >= Int32.MaxValue || dessus <= Int32.MinValue) throw new OverflowException();
+
+			if (!String.IsNullOrEmpty(Accumulation))
+			{
+				mAccumuleur.Reset(dessus);
+			}
+			else if (Éléments.Count() > 0)
+			{
+				Pop();
+				Push(dessus);
+			}
+		}
+
 		private void HandleNegationCommand()
 		{
+			int dessus;
 
+			if (!String.IsNullOrEmpty(Accumulation))
+			{
+				dessus = (int)mAccumuleur.Extraire() * - 1;
+				mAccumuleur.Reset(dessus);
+			}
+			else if (Éléments.Count() > 0)
+			{
+				dessus = mPile.Dessus * - 1;
+				Pop();
+				Push(dessus);
+			}
 		}
 
         private void HandleNumberCommand(char commande)
