@@ -567,8 +567,8 @@ namespace SDD
             Vérifier("r 3d* 4d* +", "25");  
             Vérifier("r 3² 4² +", "25");    
             Vérifier("r3e4s²s²+", "25");
-            //Vérifier("r5n²4n²-", "9"); Trace:  5/negation = -5, -5 Carre = 25, 25 Accumuler 4 = 254, 254 negation = -254, -254 Carre = 64 416. Pourquoi 9???
-        }
+			Vérifier("r5n²e4n²-", "9"); 
+		}
 
         [TestMethod]
         public void _72_ResteEtModulo()

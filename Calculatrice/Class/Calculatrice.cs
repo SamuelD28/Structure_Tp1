@@ -30,10 +30,7 @@ namespace SDD.Class
 
             foreach (CalcCommande commande in listeCommandes)
             {
-                /***/
                 if (!Enum.IsDefined(typeof(CalcCommande), commande)) throw new ArgumentException();
-                /***/
-
                 switch (commande)
                 {
                     case CalcCommande.__0:
@@ -106,13 +103,16 @@ namespace SDD.Class
                 commandeName = Enum.GetName(typeof(CalcCommande), commandes[i]); //Search for the Enum name based on the cahr value
                 Enum.TryParse(commandeName, true, out commande);   //Parse the enum to an actual CalcCommande Enum Type
 
-                if (commande != 0) listeCommandes.Add(commande); //If the parsing did work, Add the Command to the Command List
+				if (commande != 0)
+					listeCommandes.Add(commande); //If the parsing did work, Add the Command to the Command List
+				else
+					throw new ArgumentException();
             }
 
             Exécuter(listeCommandes);
         }
 
-        public bool PeutExécuter(CalcCommande commande) => true;
+        public bool PeutExécuter(CalcCommande commande) => false;
 
 		private void HandleNumberManipulationCommand(CalcCommande commande)
 		{
