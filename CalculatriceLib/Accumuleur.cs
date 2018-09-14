@@ -140,9 +140,9 @@ namespace SDD.Class
         /// Method that resets the value of valeur based on valeur parameter
         /// </summary>
         /// <param name="valeur"></param>
-        public void Reset(int? valeur)
+        public void Reset(int? valeur, bool negativeAccepted = false)
         {
-            if (valeur < 0)
+            if (valeur < 0 && !negativeAccepted)
                 throw new ArgumentException();
 
             Valeur = valeur;

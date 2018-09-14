@@ -1,6 +1,7 @@
 ﻿using SDD.Interface;
 using System;
 using System.Collections.Generic;
+using static SDD.Utility.Utils;
 using System.Linq;
 
 namespace SDD.Class
@@ -57,15 +58,11 @@ namespace SDD.Class
                         Décumuler();
                         break;
                     case CalcCommande.Addition:
-						HandleAdditionCommand();
-                        break;
                     case CalcCommande.Soustraction:
-                        break;
                     case CalcCommande.Multiplication:
-                        break;
                     case CalcCommande.DivisionEntière:
-                        break;
                     case CalcCommande.Modulo:
+						HandleNumberManipulationCommand(commande);
                         break;
                     case CalcCommande.Négation:
 						HandleNegationCommand();
@@ -92,7 +89,6 @@ namespace SDD.Class
             }
         }
 
-
 		public void Exécuter(params CalcCommande[] commandes)
         {
             Exécuter(commandes.Cast<CalcCommande>().ToList());
@@ -118,18 +114,41 @@ namespace SDD.Class
 
         public bool PeutExécuter(CalcCommande commande) => true;
 
-		private void HandleAdditionCommand()
+		private void HandleNumberManipulationCommand(CalcCommande commande)
 		{
-			if (EstVide || ListeÉléments.Count <= 1) throw new PileInsuffisanteException();
-
 			Push();
 
-			int result = ListeÉléments[ListeÉléments.Count - 1] + ListeÉléments[ListeÉléments.Count - 2];
+			if (EstVide || ListeÉléments.Count <= 1)
+				throw new PileInsuffisanteException();
 
-			if (result >= Int32.MaxValue || result <= Int32.MinValue) throw new OverflowException();
+			int result = 0;
+			int firstNumber = (IsInt32(ListeÉléments[ListeÉléments.Count - 2])) ? ListeÉléments[ListeÉléments.Count - 2] : throw new OverflowException();
+			int secondNumber = (IsInt32(ListeÉléments[ListeÉléments.Count - 1])) ? ListeÉléments[ListeÉléments.Count - 1] : throw new OverflowException();
+
+			switch (commande)
+			{
+				case CalcCommande.Addition:
+					Int32.TryParse((firstNumber + secondNumber).ToString(), out result);
+					break;
+				case CalcCommande.Soustraction:
+					Int32.TryParse((firstNumber - secondNumber).ToString(), out result);
+					break;
+				case CalcCommande.Multiplication:
+					Int32.TryParse((firstNumber * secondNumber).ToString(), out result);
+					break;
+				case CalcCommande.DivisionEntière:
+					Int32.TryParse((firstNumber / secondNumber).ToString(), out result);
+					break;
+				case CalcCommande.Modulo:
+					Int32.TryParse((firstNumber % secondNumber).ToString(), out result);
+					break;
+			}
+
+			if (!IsInt32(result)) throw new OverflowException();
 
 			Pop();
 			ListeÉléments[ListeÉléments.Count - 1] = result;
+
 		}
 
 		private void HandleSquareCommand()
@@ -142,7 +161,7 @@ namespace SDD.Class
 
 			if (!String.IsNullOrEmpty(Accumulation))
 			{
-				mAccumuleur.Reset(dessus);
+				mAccumuleur.Reset(dessus, true);
 			}
 			else if (Éléments.Count() > 0)
 			{
@@ -158,7 +177,7 @@ namespace SDD.Class
 			if (!String.IsNullOrEmpty(Accumulation))
 			{
 				dessus = (int)mAccumuleur.Extraire() * - 1;
-				mAccumuleur.Reset(dessus);
+				mAccumuleur.Reset(dessus, true);
 			}
 			else if (Éléments.Count() > 0)
 			{

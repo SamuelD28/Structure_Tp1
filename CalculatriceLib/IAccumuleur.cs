@@ -14,8 +14,7 @@ namespace SDD.Interface
         int? Extraire();
         void Reset();
         void Reset(string accumulation);
-
-        void Reset(int? valeur);
+        void Reset(int? valeur, bool negativeAccepted = false);
     }
 
     public class AccumuleurVideException : ApplicationException {

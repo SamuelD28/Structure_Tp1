@@ -85,7 +85,13 @@ namespace SDD.Utility
 		}
 		#endregion
 
-
+		static public bool IsInt32(int number)
+		{
+			if (number >= Int32.MaxValue || number <= Int32.MinValue)
+				return false;
+			else
+				return true;
+		}
 
 	}
 
