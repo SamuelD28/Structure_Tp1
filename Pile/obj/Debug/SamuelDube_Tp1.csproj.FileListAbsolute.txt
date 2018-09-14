@@ -1,0 +1,28 @@
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csprojAssemblyReference.cache
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csproj.CoreCompileInputs.cache
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe.config
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.pdb
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.exe
+M:\Documents\Session2018\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe.config
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe.config
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180828T170341Z-001\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe.config
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\bin\Debug\SamuelDube_Tp1.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\obj\Debug\SamuelDube_Tp1.pdb

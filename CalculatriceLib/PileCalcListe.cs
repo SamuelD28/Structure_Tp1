@@ -22,7 +22,7 @@ namespace SDD.Class
         /// <summary>
         /// Property that stores a list of int value passed to this class
         /// </summary>
-        public List<int> ListeÉléments { get; set; }
+        internal List<int> ListeÉléments { get;  set; }
 
         /// <summary>
         /// Property that returns the values stored inside the ListeÉlément property

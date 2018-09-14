@@ -1,0 +1,14 @@
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.exe.config
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.pdb
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.exe.config
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\bin\Debug\Calculatrice.pdb
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
+\\cstjean.qc.ca\reseau\docetu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb

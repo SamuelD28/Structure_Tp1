@@ -17,3 +17,22 @@
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CopyComplete
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.dll
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\UnitTesting\obj\Debug\UnitTesting.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\UnitTesting.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\UnitTesting.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Calculatrice.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Calculatrice.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Calculatrice.exe.config
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\obj\Debug\UnitTesting.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\obj\Debug\UnitTesting.csproj.CopyComplete
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\obj\Debug\UnitTesting.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\UnitTesting\obj\Debug\UnitTesting.pdb

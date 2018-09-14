@@ -67,6 +67,7 @@ namespace SDD.Class
                     case CalcCommande.Modulo:
                         break;
                     case CalcCommande.Négation:
+						HandleNegationCommand();
                         break;
                     case CalcCommande.Carré:
                         break;
@@ -89,7 +90,8 @@ namespace SDD.Class
             }
         }
 
-        public void Exécuter(params CalcCommande[] commandes)
+
+		public void Exécuter(params CalcCommande[] commandes)
         {
             Exécuter(commandes.Cast<CalcCommande>().ToList());
         }
@@ -113,6 +115,11 @@ namespace SDD.Class
         }
 
         public bool PeutExécuter(CalcCommande commande) => true;
+
+		private void HandleNegationCommand()
+		{
+
+		}
 
         private void HandleNumberCommand(char commande)
         {
@@ -149,18 +156,18 @@ namespace SDD.Class
         {
             if (EstVide) throw new PileInsuffisanteException();
 
+			Push();
 
-            if (Accumulateur != null)
-            {
-                int acc = (int)mAccumuleur.Extraire();
-                HandleDuplicateCommand();
-                mPile.ListeÉléments[mPile.ListeÉléments.Count - 2] = acc;
-            }
-            else
-            {
-                int dessus = (int)Dessus;
-                HandleDuplicateCommand();
-            }
+			if (Éléments.Count() < 2)
+				throw new PileInsuffisanteException();
+			else
+			{
+				List<int> tempList = Éléments.Cast<int>().ToList();
+				tempList[tempList.Count - 1] = (int)Éléments.ElementAt(Éléments.Count() - 2);
+				tempList[tempList.Count - 2] = (int)Dessus;
+				ListeÉléments = tempList;
+			}
+
 
         }
 

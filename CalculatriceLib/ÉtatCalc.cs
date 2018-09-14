@@ -65,7 +65,13 @@ namespace SDD.Class
         /// <summary>
         /// Pile Driver
         /// </summary>
-        public PileCalcListe mPile { get; set; }
+        protected PileCalcListe mPile { get; set; }
+
+		public List<int> ListeÉléments
+		{
+			get { return mPile.ListeÉléments; }
+			set { mPile.ListeÉléments = value; }
+		}
 
         /// <summary>
         /// Contains the cumulator value
@@ -148,12 +154,13 @@ namespace SDD.Class
         /// Method that adds a new element to the pile stack
         /// </summary>
         /// <param name="nombre"></param>
-        public void Push(int nombre)
+        public void Push(int? nombre = null)
         {
             if (Accumulateur != null)
                 mPile.Push((int)mAccumuleur.Extraire());
 
-            mPile.Push(nombre);
+			if(nombre != null)
+				mPile.Push((int)nombre);
         }
 
         /// <summary>

@@ -8,3 +8,13 @@
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CopyComplete
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
 \\cstjean.qc.ca\reseau\docetu\1489005\Desktop\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\bin\Debug\Calculatrice.exe.config
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\bin\Debug\Calculatrice.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\bin\Debug\Calculatrice.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\obj\Debug\Calculatrice.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CopyComplete
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb

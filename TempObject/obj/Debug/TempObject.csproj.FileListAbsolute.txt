@@ -1,0 +1,29 @@
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.exe.config
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.exe
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.pdb
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.csprojAssemblyReference.cache
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.csproj.CoreCompileInputs.cache
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.exe
+\\cstjean.qc.ca\reseau\DocEtu\1489005\Desktop\SamuelDube_Tp1-20180904T175254Z-001\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.exe.config
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\bin\Debug\TempObject.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\SamuelDube_Tp1\TempObject\obj\Debug\TempObject.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\TempObject.exe.config
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\TempObject.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\TempObject.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\obj\Debug\TempObject.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\obj\Debug\TempObject.csproj.CopyComplete
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\obj\Debug\TempObject.exe
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\obj\Debug\TempObject.pdb
+C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\TempObject\obj\Debug\TempObject.csprojResolveAssemblyReference.cache
