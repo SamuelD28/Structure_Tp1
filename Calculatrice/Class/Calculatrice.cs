@@ -8,22 +8,58 @@ namespace SDD.Class
 {
     public class Calculatrice : ÉtatCalc, ICalculatrice
     {
+		/// <summary>
+		/// Constructor that takes a pile and an accumulator as arguments
+		/// </summary>
+		/// <param name="pile"></param>
+		/// <param name="acc"></param>
         public Calculatrice(IPileCalc pile = null, IAccumuleur acc = null) : base(pile, acc) { }
 
+		/// <summary>
+		/// Constructor that takes an int cummulator and array of int for the pile content
+		/// </summary>
+		/// <param name="accumulateur"></param>
+		/// <param name="pile"></param>
         public Calculatrice(int? accumulateur, params int[] pile) : base(accumulateur, pile) { }
 
+		/// <summary>
+		/// Constructor that takes an IEnumerable for the pile and a int for the cumulator value
+		/// </summary>
+		/// <param name="pile"></param>
+		/// <param name="accumulateur"></param>
         public Calculatrice(IEnumerable<int> pile, int? accumulateur = null) : base(pile, accumulateur) { }
 
+		/// <summary>
+		/// Constructor that can initialise the pile and cumulator with a string parameter
+		/// </summary>
+		/// <param name="enTexte"></param>
         public Calculatrice(string enTexte) : base(enTexte) { }
 
+		/// <summary>
+		/// Return the cumulator value
+		/// </summary>
         public string Accumulation => mAccumuleur.Accumulation;
 
+		/// <summary>
+		/// Return an IEnumerable object that contains the pile content
+		/// </summary>
         public IEnumerable<object> Éléments => Pile.Cast<object>().ToList();
 
+		/// <summary>
+		/// Return the results of the operations
+		/// </summary>
         public object Résultat => Dessus;
 
+		/// <summary>
+		/// Returns a new Calculatrice based of the current one
+		/// </summary>
+		/// <returns></returns>
         public new ICalculatrice Cloner() => new Calculatrice(EnTexte());
 
+		/// <summary>
+		/// Methods that execute the corresponding command passed by the users. Receives an IEnumerable of commands
+		/// </summary>
+		/// <param name="commandes"></param>
         public void Exécuter(IEnumerable<CalcCommande> commandes)
         {
             List<CalcCommande> listeCommandes = commandes.Cast<CalcCommande>().ToList();
@@ -43,7 +79,7 @@ namespace SDD.Class
                     case CalcCommande.__7:
                     case CalcCommande.__8:
                     case CalcCommande.__9:
-                        HandleNumberCommand((char)commande);
+						HandleCumulatorCommand((char)commande);
                         break;
                     case CalcCommande.EntrerObligatoire:
                         HandleEnterCommand(false);
@@ -59,7 +95,7 @@ namespace SDD.Class
                     case CalcCommande.Multiplication:
                     case CalcCommande.DivisionEntière:
                     case CalcCommande.Modulo:
-						HandleNumberManipulationCommand(commande);
+						HandleMultipleNumberOperationCommand(commande);
                         break;
                     case CalcCommande.Négation:
 						HandleNegationCommand();
@@ -86,11 +122,19 @@ namespace SDD.Class
             }
         }
 
+		/// <summary>
+		/// Methods that receives an Array of command and convert it to a list to pass it to the original execute method
+		/// </summary>
+		/// <param name="commandes"></param>
 		public void Exécuter(params CalcCommande[] commandes)
         {
             Exécuter(commandes.Cast<CalcCommande>().ToList());
         }
 
+		/// <summary>
+		/// Method that receive a string as a list of command and then parses it to List of CalcCommand
+		/// </summary>
+		/// <param name="commandes"></param>
         public void Exécuter(string commandes)
         {
             List<CalcCommande> listeCommandes = new List<CalcCommande>();
@@ -112,9 +156,18 @@ namespace SDD.Class
             Exécuter(listeCommandes);
         }
 
+		/// <summary>
+		/// Indicate wether the method can be executed
+		/// </summary>
+		/// <param name="commande"></param>
+		/// <returns></returns>
         public bool PeutExécuter(CalcCommande commande) => false;
 
-		private void HandleNumberManipulationCommand(CalcCommande commande)
+		/// <summary>
+		/// Method that handle operations that involves two adjacents numbers
+		/// </summary>
+		/// <param name="commande"></param>
+		private void HandleMultipleNumberOperationCommand(CalcCommande commande)
 		{
 			Push();
 
@@ -151,6 +204,9 @@ namespace SDD.Class
 
 		}
 
+		/// <summary>
+		/// Method that handle the square command
+		/// </summary>
 		private void HandleSquareCommand()
 		{
 			if (EstVide) throw new PileInsuffisanteException();
@@ -170,6 +226,9 @@ namespace SDD.Class
 			}
 		}
 
+		/// <summary>
+		/// Method that handle the negation command
+		/// </summary>
 		private void HandleNegationCommand()
 		{
 			int dessus;
@@ -187,11 +246,19 @@ namespace SDD.Class
 			}
 		}
 
-        private void HandleNumberCommand(char commande)
+		/// <summary>
+		/// Method that handle the change of the cumulator content
+		/// </summary>
+		/// <param name="commande"></param>
+        private void HandleCumulatorCommand(char commande)
         {
             Accumuler(commande);
         }
 
+		/// <summary>
+		/// Method that handle the enter command
+		/// </summary>
+		/// <param name="nullAccepted"></param>
         private void HandleEnterCommand(bool nullAccepted = true)
         {
             int? valeur = mAccumuleur.Extraire();
@@ -202,12 +269,18 @@ namespace SDD.Class
                 Push((int)valeur);
         }
 
+		/// <summary>
+		/// Method that handle the pop command
+		/// </summary>
         private void HandlePopCommand()
         {
             if (EstVide) throw new PileInsuffisanteException();
             Pop();
         }
 
+		/// <summary>
+		/// Method that handle the duplicate command
+		/// </summary>
         private void HandleDuplicateCommand()
         {
             if (EstVide) throw new PileInsuffisanteException();
@@ -218,6 +291,9 @@ namespace SDD.Class
                 Push((int)dessus);
         }
 
+		/// <summary>
+		/// Method that handle the swap command
+		/// </summary>
         private void HandleSwapCommand()
         {
             if (EstVide) throw new PileInsuffisanteException();
