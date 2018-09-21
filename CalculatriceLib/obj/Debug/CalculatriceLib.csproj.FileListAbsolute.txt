@@ -9,3 +9,9 @@ C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\CalculatriceLib\obj\Debug\Cal
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.dll
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.pdb
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\CalculatriceLib\obj\Debug\CalculatriceLib.csprojResolveAssemblyReference.cache

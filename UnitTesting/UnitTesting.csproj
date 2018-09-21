@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TesterAcc.cs" />
+    <Compile Include="TesterBatch %281%29.cs" />
     <Compile Include="TesterCalc.cs" />
     <Compile Include="TesterPile.cs" />
     <Compile Include="TesterPile_Liste.cs" />

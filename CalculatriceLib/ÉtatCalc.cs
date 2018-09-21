@@ -229,7 +229,6 @@ namespace SDD.Class
                 {
                     string element = strArray.GetValue(i).ToString();
 
-
                     if (element.Contains("?") && element.Contains("-"))
                         return false;
                     else if (element.Contains("?") && i == 0 && strArray.Length > 1)
@@ -238,9 +237,14 @@ namespace SDD.Class
                         return false;
                     else
                     {
-                        int result;
-                        Int32.TryParse(element.Trim(new char[]{',', '?'}), out result);
-                        if (result == 0) return false;
+						try
+						{
+							int result = Int32.Parse(element.Trim(new char[] { ',', '?' })); ;
+						}
+						catch(Exception)
+						{
+							return false;
+						}
                     }
                 }
             }

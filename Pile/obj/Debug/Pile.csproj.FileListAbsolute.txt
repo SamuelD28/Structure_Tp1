@@ -36,3 +36,13 @@ C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Pile\obj\Debug\Pile.csproj.Co
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Pile\obj\Debug\Pile.csproj.CopyComplete
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Pile\obj\Debug\SamuelDube_Tp1.exe
 C:\Users\Sameul Dube\Desktop\SamuelDube_Struct_Tp1\Pile\obj\Debug\SamuelDube_Tp1.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.exe.config
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csproj.CopyComplete
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\obj\Debug\SamuelDube_Tp1.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Pile\obj\Debug\SamuelDube_Tp1.pdb

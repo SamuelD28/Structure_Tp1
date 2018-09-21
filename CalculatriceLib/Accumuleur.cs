@@ -59,7 +59,7 @@ namespace SDD.Class
                 if (Valeur is null) return String.Empty;
                 else return Convert.ToString(Valeur);
             }
-            private set {
+            protected set {
                 if (value == String.Empty || value == null) Valeur = null;
                 else Valeur = Convert.ToInt32(value); 
             }
