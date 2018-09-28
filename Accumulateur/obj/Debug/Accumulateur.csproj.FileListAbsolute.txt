@@ -46,3 +46,13 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Accumulateur\obj\Debug\Accumulat
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Accumulateur\obj\Debug\Accumulateur.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Accumulateur\obj\Debug\Accumulateur.exe
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Accumulateur\obj\Debug\Accumulateur.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\bin\Debug\Accumulateur.exe.config
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\bin\Debug\Accumulateur.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\bin\Debug\Accumulateur.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\obj\Debug\Accumulateur.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\obj\Debug\Accumulateur.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\obj\Debug\Accumulateur.csproj.CopyComplete
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\obj\Debug\Accumulateur.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Accumulateur\obj\Debug\Accumulateur.pdb

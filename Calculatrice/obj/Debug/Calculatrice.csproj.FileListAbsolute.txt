@@ -28,3 +28,13 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Calculatrice\obj\Debug\Calculatr
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.exe
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp1\Calculatrice\obj\Debug\Calculatrice.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\bin\Debug\Calculatrice.exe.config
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\bin\Debug\Calculatrice.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\bin\Debug\Calculatrice.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\bin\Debug\CalculatriceLib.dll
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\bin\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\obj\Debug\Calculatrice.csprojResolveAssemblyReference.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\obj\Debug\Calculatrice.csproj.CopyComplete
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\obj\Debug\Calculatrice.exe
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Calculatrice\obj\Debug\Calculatrice.pdb
