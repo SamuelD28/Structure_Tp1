@@ -70,7 +70,6 @@ namespace SDD.Class
         {
             int lastElement = Dessus;
             ListeÉléments.RemoveAt(ListeÉléments.Count - 1);
-            Clear(); //Clear the console
             return lastElement;
         }
 

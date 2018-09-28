@@ -30,33 +30,33 @@
 		{
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
-			this.button9 = new System.Windows.Forms.Button();
-			this.button10 = new System.Windows.Forms.Button();
-			this.button11 = new System.Windows.Forms.Button();
-			this.button12 = new System.Windows.Forms.Button();
-			this.button13 = new System.Windows.Forms.Button();
-			this.button14 = new System.Windows.Forms.Button();
-			this.button15 = new System.Windows.Forms.Button();
-			this.button16 = new System.Windows.Forms.Button();
-			this.button17 = new System.Windows.Forms.Button();
-			this.button18 = new System.Windows.Forms.Button();
-			this.button19 = new System.Windows.Forms.Button();
-			this.button20 = new System.Windows.Forms.Button();
-			this.button21 = new System.Windows.Forms.Button();
-			this.button22 = new System.Windows.Forms.Button();
-			this.button23 = new System.Windows.Forms.Button();
+			this._7 = new System.Windows.Forms.Button();
+			this._8 = new System.Windows.Forms.Button();
+			this._9 = new System.Windows.Forms.Button();
+			this.Add_Btn = new System.Windows.Forms.Button();
+			this.Substract_Btn = new System.Windows.Forms.Button();
+			this.Negate_Btn = new System.Windows.Forms.Button();
+			this._6 = new System.Windows.Forms.Button();
+			this._5 = new System.Windows.Forms.Button();
+			this._4 = new System.Windows.Forms.Button();
+			this.Sqaure_Btn = new System.Windows.Forms.Button();
+			this.Multiply_Btn = new System.Windows.Forms.Button();
+			this._3 = new System.Windows.Forms.Button();
+			this._2 = new System.Windows.Forms.Button();
+			this._1 = new System.Windows.Forms.Button();
+			this.Modolu_Btn = new System.Windows.Forms.Button();
+			this.Division_Btn = new System.Windows.Forms.Button();
+			this.Enter_Btn = new System.Windows.Forms.Button();
+			this.Back_Btn = new System.Windows.Forms.Button();
+			this._0 = new System.Windows.Forms.Button();
+			this.Reset_Btn = new System.Windows.Forms.Button();
+			this.Swap_Btn = new System.Windows.Forms.Button();
+			this.Duplicate_Btn = new System.Windows.Forms.Button();
+			this.Pop_Btn = new System.Windows.Forms.Button();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.Cumulator_Label = new System.Windows.Forms.Label();
+			this.Pile_List = new System.Windows.Forms.ListBox();
+			this.Error_Label = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
@@ -69,7 +69,7 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.02647F));
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.Error_Label, 0, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -87,29 +87,29 @@
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-			this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-			this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
-			this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
-			this.tableLayoutPanel2.Controls.Add(this.button4, 3, 0);
-			this.tableLayoutPanel2.Controls.Add(this.button5, 3, 1);
-			this.tableLayoutPanel2.Controls.Add(this.button6, 4, 1);
-			this.tableLayoutPanel2.Controls.Add(this.button7, 2, 1);
-			this.tableLayoutPanel2.Controls.Add(this.button8, 1, 1);
-			this.tableLayoutPanel2.Controls.Add(this.button9, 0, 1);
-			this.tableLayoutPanel2.Controls.Add(this.button10, 4, 2);
-			this.tableLayoutPanel2.Controls.Add(this.button11, 3, 2);
-			this.tableLayoutPanel2.Controls.Add(this.button12, 2, 2);
-			this.tableLayoutPanel2.Controls.Add(this.button13, 1, 2);
-			this.tableLayoutPanel2.Controls.Add(this.button14, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.button15, 4, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button16, 3, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button17, 2, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button18, 1, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button19, 0, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button20, 3, 4);
-			this.tableLayoutPanel2.Controls.Add(this.button21, 2, 4);
-			this.tableLayoutPanel2.Controls.Add(this.button22, 1, 4);
-			this.tableLayoutPanel2.Controls.Add(this.button23, 0, 4);
+			this.tableLayoutPanel2.Controls.Add(this._7, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this._8, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this._9, 2, 0);
+			this.tableLayoutPanel2.Controls.Add(this.Add_Btn, 3, 0);
+			this.tableLayoutPanel2.Controls.Add(this.Substract_Btn, 3, 1);
+			this.tableLayoutPanel2.Controls.Add(this.Negate_Btn, 4, 1);
+			this.tableLayoutPanel2.Controls.Add(this._6, 2, 1);
+			this.tableLayoutPanel2.Controls.Add(this._5, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this._4, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.Sqaure_Btn, 4, 2);
+			this.tableLayoutPanel2.Controls.Add(this.Multiply_Btn, 3, 2);
+			this.tableLayoutPanel2.Controls.Add(this._3, 2, 2);
+			this.tableLayoutPanel2.Controls.Add(this._2, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this._1, 0, 2);
+			this.tableLayoutPanel2.Controls.Add(this.Modolu_Btn, 4, 3);
+			this.tableLayoutPanel2.Controls.Add(this.Division_Btn, 3, 3);
+			this.tableLayoutPanel2.Controls.Add(this.Enter_Btn, 2, 3);
+			this.tableLayoutPanel2.Controls.Add(this.Back_Btn, 1, 3);
+			this.tableLayoutPanel2.Controls.Add(this._0, 0, 3);
+			this.tableLayoutPanel2.Controls.Add(this.Reset_Btn, 3, 4);
+			this.tableLayoutPanel2.Controls.Add(this.Swap_Btn, 2, 4);
+			this.tableLayoutPanel2.Controls.Add(this.Duplicate_Btn, 1, 4);
+			this.tableLayoutPanel2.Controls.Add(this.Pop_Btn, 0, 4);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -122,312 +122,358 @@
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(342, 424);
 			this.tableLayoutPanel2.TabIndex = 0;
 			// 
-			// button1
+			// _7
 			// 
-			this.button1.BackColor = System.Drawing.Color.White;
-			this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button1.Location = new System.Drawing.Point(3, 3);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(62, 78);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "7";
-			this.button1.UseVisualStyleBackColor = false;
+			this._7.BackColor = System.Drawing.Color.White;
+			this._7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._7.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._7.Location = new System.Drawing.Point(3, 3);
+			this._7.Name = "_7";
+			this._7.Size = new System.Drawing.Size(62, 78);
+			this._7.TabIndex = 0;
+			this._7.Tag = "7";
+			this._7.Text = "7";
+			this._7.UseVisualStyleBackColor = false;
+			this._7.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button2
+			// _8
 			// 
-			this.button2.BackColor = System.Drawing.Color.White;
-			this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button2.Location = new System.Drawing.Point(71, 3);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(62, 78);
-			this.button2.TabIndex = 1;
-			this.button2.Text = "8";
-			this.button2.UseVisualStyleBackColor = false;
+			this._8.BackColor = System.Drawing.Color.White;
+			this._8.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._8.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._8.Location = new System.Drawing.Point(71, 3);
+			this._8.Name = "_8";
+			this._8.Size = new System.Drawing.Size(62, 78);
+			this._8.TabIndex = 1;
+			this._8.Tag = "8";
+			this._8.Text = "8";
+			this._8.UseVisualStyleBackColor = false;
+			this._8.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button3
+			// _9
 			// 
-			this.button3.BackColor = System.Drawing.Color.White;
-			this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button3.Location = new System.Drawing.Point(139, 3);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(62, 78);
-			this.button3.TabIndex = 2;
-			this.button3.Text = "9";
-			this.button3.UseVisualStyleBackColor = false;
+			this._9.BackColor = System.Drawing.Color.White;
+			this._9.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._9.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._9.Location = new System.Drawing.Point(139, 3);
+			this._9.Name = "_9";
+			this._9.Size = new System.Drawing.Size(62, 78);
+			this._9.TabIndex = 2;
+			this._9.Tag = "9";
+			this._9.Text = "9";
+			this._9.UseVisualStyleBackColor = false;
+			this._9.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button4
+			// Add_Btn
 			// 
-			this.button4.BackColor = System.Drawing.Color.White;
-			this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button4.Location = new System.Drawing.Point(207, 3);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(62, 78);
-			this.button4.TabIndex = 3;
-			this.button4.Text = "+";
-			this.button4.UseVisualStyleBackColor = false;
+			this.Add_Btn.BackColor = System.Drawing.Color.White;
+			this.Add_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Add_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Add_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Add_Btn.Location = new System.Drawing.Point(207, 3);
+			this.Add_Btn.Name = "Add_Btn";
+			this.Add_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Add_Btn.TabIndex = 3;
+			this.Add_Btn.Tag = "+";
+			this.Add_Btn.Text = "+";
+			this.Add_Btn.UseVisualStyleBackColor = false;
+			this.Add_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button5
+			// Substract_Btn
 			// 
-			this.button5.BackColor = System.Drawing.Color.White;
-			this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button5.Location = new System.Drawing.Point(207, 87);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(62, 78);
-			this.button5.TabIndex = 4;
-			this.button5.Text = "-";
-			this.button5.UseVisualStyleBackColor = false;
+			this.Substract_Btn.BackColor = System.Drawing.Color.White;
+			this.Substract_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Substract_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Substract_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Substract_Btn.Location = new System.Drawing.Point(207, 87);
+			this.Substract_Btn.Name = "Substract_Btn";
+			this.Substract_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Substract_Btn.TabIndex = 4;
+			this.Substract_Btn.Tag = "-";
+			this.Substract_Btn.Text = "-";
+			this.Substract_Btn.UseVisualStyleBackColor = false;
+			this.Substract_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button6
+			// Negate_Btn
 			// 
-			this.button6.BackColor = System.Drawing.Color.White;
-			this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button6.Location = new System.Drawing.Point(275, 87);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(64, 78);
-			this.button6.TabIndex = 5;
-			this.button6.Text = "N";
-			this.button6.UseVisualStyleBackColor = false;
+			this.Negate_Btn.BackColor = System.Drawing.Color.White;
+			this.Negate_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Negate_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Negate_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Negate_Btn.Location = new System.Drawing.Point(275, 87);
+			this.Negate_Btn.Name = "Negate_Btn";
+			this.Negate_Btn.Size = new System.Drawing.Size(64, 78);
+			this.Negate_Btn.TabIndex = 5;
+			this.Negate_Btn.Tag = "n";
+			this.Negate_Btn.Text = "N";
+			this.Negate_Btn.UseVisualStyleBackColor = false;
+			this.Negate_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button7
+			// _6
 			// 
-			this.button7.BackColor = System.Drawing.Color.White;
-			this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button7.Location = new System.Drawing.Point(139, 87);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(62, 78);
-			this.button7.TabIndex = 6;
-			this.button7.Text = "6";
-			this.button7.UseVisualStyleBackColor = false;
+			this._6.BackColor = System.Drawing.Color.White;
+			this._6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._6.Location = new System.Drawing.Point(139, 87);
+			this._6.Name = "_6";
+			this._6.Size = new System.Drawing.Size(62, 78);
+			this._6.TabIndex = 6;
+			this._6.Tag = "6";
+			this._6.Text = "6";
+			this._6.UseVisualStyleBackColor = false;
+			this._6.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button8
+			// _5
 			// 
-			this.button8.BackColor = System.Drawing.Color.White;
-			this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button8.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button8.Location = new System.Drawing.Point(71, 87);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(62, 78);
-			this.button8.TabIndex = 7;
-			this.button8.Text = "5";
-			this.button8.UseVisualStyleBackColor = false;
+			this._5.BackColor = System.Drawing.Color.White;
+			this._5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._5.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._5.Location = new System.Drawing.Point(71, 87);
+			this._5.Name = "_5";
+			this._5.Size = new System.Drawing.Size(62, 78);
+			this._5.TabIndex = 7;
+			this._5.Tag = "5";
+			this._5.Text = "5";
+			this._5.UseVisualStyleBackColor = false;
+			this._5.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button9
+			// _4
 			// 
-			this.button9.BackColor = System.Drawing.Color.White;
-			this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button9.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button9.Location = new System.Drawing.Point(3, 87);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(62, 78);
-			this.button9.TabIndex = 8;
-			this.button9.Text = "4";
-			this.button9.UseVisualStyleBackColor = false;
+			this._4.BackColor = System.Drawing.Color.White;
+			this._4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._4.Location = new System.Drawing.Point(3, 87);
+			this._4.Name = "_4";
+			this._4.Size = new System.Drawing.Size(62, 78);
+			this._4.TabIndex = 8;
+			this._4.Tag = "4";
+			this._4.Text = "4";
+			this._4.UseVisualStyleBackColor = false;
+			this._4.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button10
+			// Sqaure_Btn
 			// 
-			this.button10.BackColor = System.Drawing.Color.White;
-			this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button10.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button10.Location = new System.Drawing.Point(275, 171);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(64, 78);
-			this.button10.TabIndex = 9;
-			this.button10.Text = "²";
-			this.button10.UseVisualStyleBackColor = false;
+			this.Sqaure_Btn.BackColor = System.Drawing.Color.White;
+			this.Sqaure_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Sqaure_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Sqaure_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Sqaure_Btn.Location = new System.Drawing.Point(275, 171);
+			this.Sqaure_Btn.Name = "Sqaure_Btn";
+			this.Sqaure_Btn.Size = new System.Drawing.Size(64, 78);
+			this.Sqaure_Btn.TabIndex = 9;
+			this.Sqaure_Btn.Tag = "²";
+			this.Sqaure_Btn.Text = "²";
+			this.Sqaure_Btn.UseVisualStyleBackColor = false;
+			this.Sqaure_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button11
+			// Multiply_Btn
 			// 
-			this.button11.BackColor = System.Drawing.Color.White;
-			this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button11.Location = new System.Drawing.Point(207, 171);
-			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(62, 78);
-			this.button11.TabIndex = 10;
-			this.button11.Text = "X";
-			this.button11.UseVisualStyleBackColor = false;
+			this.Multiply_Btn.BackColor = System.Drawing.Color.White;
+			this.Multiply_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Multiply_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Multiply_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Multiply_Btn.Location = new System.Drawing.Point(207, 171);
+			this.Multiply_Btn.Name = "Multiply_Btn";
+			this.Multiply_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Multiply_Btn.TabIndex = 10;
+			this.Multiply_Btn.Tag = "*";
+			this.Multiply_Btn.Text = "X";
+			this.Multiply_Btn.UseVisualStyleBackColor = false;
+			this.Multiply_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button12
+			// _3
 			// 
-			this.button12.BackColor = System.Drawing.Color.White;
-			this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button12.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button12.Location = new System.Drawing.Point(139, 171);
-			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(62, 78);
-			this.button12.TabIndex = 11;
-			this.button12.Text = "3";
-			this.button12.UseVisualStyleBackColor = false;
+			this._3.BackColor = System.Drawing.Color.White;
+			this._3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._3.Location = new System.Drawing.Point(139, 171);
+			this._3.Name = "_3";
+			this._3.Size = new System.Drawing.Size(62, 78);
+			this._3.TabIndex = 11;
+			this._3.Tag = "3";
+			this._3.Text = "3";
+			this._3.UseVisualStyleBackColor = false;
+			this._3.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button13
+			// _2
 			// 
-			this.button13.BackColor = System.Drawing.Color.White;
-			this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button13.Location = new System.Drawing.Point(71, 171);
-			this.button13.Name = "button13";
-			this.button13.Size = new System.Drawing.Size(62, 78);
-			this.button13.TabIndex = 12;
-			this.button13.Text = "2";
-			this.button13.UseVisualStyleBackColor = false;
+			this._2.BackColor = System.Drawing.Color.White;
+			this._2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._2.Location = new System.Drawing.Point(71, 171);
+			this._2.Name = "_2";
+			this._2.Size = new System.Drawing.Size(62, 78);
+			this._2.TabIndex = 12;
+			this._2.Tag = "2";
+			this._2.Text = "2";
+			this._2.UseVisualStyleBackColor = false;
+			this._2.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button14
+			// _1
 			// 
-			this.button14.BackColor = System.Drawing.Color.White;
-			this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button14.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button14.Location = new System.Drawing.Point(3, 171);
-			this.button14.Name = "button14";
-			this.button14.Size = new System.Drawing.Size(62, 78);
-			this.button14.TabIndex = 13;
-			this.button14.Text = "1";
-			this.button14.UseVisualStyleBackColor = false;
+			this._1.BackColor = System.Drawing.Color.White;
+			this._1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._1.Location = new System.Drawing.Point(3, 171);
+			this._1.Name = "_1";
+			this._1.Size = new System.Drawing.Size(62, 78);
+			this._1.TabIndex = 13;
+			this._1.Tag = "1";
+			this._1.Text = "1";
+			this._1.UseVisualStyleBackColor = false;
+			this._1.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button15
+			// Modolu_Btn
 			// 
-			this.button15.BackColor = System.Drawing.Color.White;
-			this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button15.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button15.Location = new System.Drawing.Point(275, 255);
-			this.button15.Name = "button15";
-			this.button15.Size = new System.Drawing.Size(64, 78);
-			this.button15.TabIndex = 14;
-			this.button15.Text = "%";
-			this.button15.UseVisualStyleBackColor = false;
+			this.Modolu_Btn.BackColor = System.Drawing.Color.White;
+			this.Modolu_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Modolu_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Modolu_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Modolu_Btn.Location = new System.Drawing.Point(275, 255);
+			this.Modolu_Btn.Name = "Modolu_Btn";
+			this.Modolu_Btn.Size = new System.Drawing.Size(64, 78);
+			this.Modolu_Btn.TabIndex = 14;
+			this.Modolu_Btn.Tag = "%";
+			this.Modolu_Btn.Text = "%";
+			this.Modolu_Btn.UseVisualStyleBackColor = false;
+			this.Modolu_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button16
+			// Division_Btn
 			// 
-			this.button16.BackColor = System.Drawing.Color.White;
-			this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button16.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button16.Location = new System.Drawing.Point(207, 255);
-			this.button16.Name = "button16";
-			this.button16.Size = new System.Drawing.Size(62, 78);
-			this.button16.TabIndex = 15;
-			this.button16.Text = "/";
-			this.button16.UseVisualStyleBackColor = false;
+			this.Division_Btn.BackColor = System.Drawing.Color.White;
+			this.Division_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Division_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Division_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Division_Btn.Location = new System.Drawing.Point(207, 255);
+			this.Division_Btn.Name = "Division_Btn";
+			this.Division_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Division_Btn.TabIndex = 15;
+			this.Division_Btn.Tag = "\\";
+			this.Division_Btn.Text = "/";
+			this.Division_Btn.UseVisualStyleBackColor = false;
+			this.Division_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button17
+			// Enter_Btn
 			// 
-			this.button17.BackColor = System.Drawing.Color.White;
-			this.button17.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button17.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button17.Location = new System.Drawing.Point(139, 255);
-			this.button17.Name = "button17";
-			this.button17.Size = new System.Drawing.Size(62, 78);
-			this.button17.TabIndex = 16;
-			this.button17.Text = "Enter";
-			this.button17.UseVisualStyleBackColor = false;
+			this.Enter_Btn.BackColor = System.Drawing.Color.White;
+			this.Enter_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Enter_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Enter_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Enter_Btn.Location = new System.Drawing.Point(139, 255);
+			this.Enter_Btn.Name = "Enter_Btn";
+			this.Enter_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Enter_Btn.TabIndex = 16;
+			this.Enter_Btn.Tag = "e";
+			this.Enter_Btn.Text = "Enter";
+			this.Enter_Btn.UseVisualStyleBackColor = false;
+			this.Enter_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button18
+			// Back_Btn
 			// 
-			this.button18.BackColor = System.Drawing.Color.White;
-			this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button18.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button18.Location = new System.Drawing.Point(71, 255);
-			this.button18.Name = "button18";
-			this.button18.Size = new System.Drawing.Size(62, 78);
-			this.button18.TabIndex = 17;
-			this.button18.Text = "Back";
-			this.button18.UseVisualStyleBackColor = false;
+			this.Back_Btn.BackColor = System.Drawing.Color.White;
+			this.Back_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Back_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Back_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Back_Btn.Location = new System.Drawing.Point(71, 255);
+			this.Back_Btn.Name = "Back_Btn";
+			this.Back_Btn.Size = new System.Drawing.Size(62, 78);
+			this.Back_Btn.TabIndex = 17;
+			this.Back_Btn.Tag = "b";
+			this.Back_Btn.Text = "Back";
+			this.Back_Btn.UseVisualStyleBackColor = false;
+			this.Back_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button19
+			// _0
 			// 
-			this.button19.BackColor = System.Drawing.Color.White;
-			this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button19.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button19.Location = new System.Drawing.Point(3, 255);
-			this.button19.Name = "button19";
-			this.button19.Size = new System.Drawing.Size(62, 78);
-			this.button19.TabIndex = 18;
-			this.button19.Text = "0";
-			this.button19.UseVisualStyleBackColor = false;
+			this._0.BackColor = System.Drawing.Color.White;
+			this._0.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._0.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this._0.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this._0.Location = new System.Drawing.Point(3, 255);
+			this._0.Name = "_0";
+			this._0.Size = new System.Drawing.Size(62, 78);
+			this._0.TabIndex = 18;
+			this._0.Tag = "0";
+			this._0.Text = "0";
+			this._0.UseVisualStyleBackColor = false;
+			this._0.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button20
+			// Reset_Btn
 			// 
-			this.button20.BackColor = System.Drawing.Color.White;
-			this.button20.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button20.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button20.Location = new System.Drawing.Point(207, 339);
-			this.button20.Name = "button20";
-			this.button20.Size = new System.Drawing.Size(62, 82);
-			this.button20.TabIndex = 19;
-			this.button20.Text = "R";
-			this.button20.UseVisualStyleBackColor = false;
+			this.Reset_Btn.BackColor = System.Drawing.Color.White;
+			this.Reset_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Reset_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Reset_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Reset_Btn.Location = new System.Drawing.Point(207, 339);
+			this.Reset_Btn.Name = "Reset_Btn";
+			this.Reset_Btn.Size = new System.Drawing.Size(62, 82);
+			this.Reset_Btn.TabIndex = 19;
+			this.Reset_Btn.Tag = "r";
+			this.Reset_Btn.Text = "R";
+			this.Reset_Btn.UseVisualStyleBackColor = false;
+			this.Reset_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button21
+			// Swap_Btn
 			// 
-			this.button21.BackColor = System.Drawing.Color.White;
-			this.button21.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button21.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button21.Location = new System.Drawing.Point(139, 339);
-			this.button21.Name = "button21";
-			this.button21.Size = new System.Drawing.Size(62, 82);
-			this.button21.TabIndex = 20;
-			this.button21.Text = "Swap";
-			this.button21.UseVisualStyleBackColor = false;
+			this.Swap_Btn.BackColor = System.Drawing.Color.White;
+			this.Swap_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Swap_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Swap_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Swap_Btn.Location = new System.Drawing.Point(139, 339);
+			this.Swap_Btn.Name = "Swap_Btn";
+			this.Swap_Btn.Size = new System.Drawing.Size(62, 82);
+			this.Swap_Btn.TabIndex = 20;
+			this.Swap_Btn.Tag = "s";
+			this.Swap_Btn.Text = "Swap";
+			this.Swap_Btn.UseVisualStyleBackColor = false;
+			this.Swap_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button22
+			// Duplicate_Btn
 			// 
-			this.button22.BackColor = System.Drawing.Color.White;
-			this.button22.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button22.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button22.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button22.Location = new System.Drawing.Point(71, 339);
-			this.button22.Name = "button22";
-			this.button22.Size = new System.Drawing.Size(62, 82);
-			this.button22.TabIndex = 21;
-			this.button22.Text = "D";
-			this.button22.UseVisualStyleBackColor = false;
+			this.Duplicate_Btn.BackColor = System.Drawing.Color.White;
+			this.Duplicate_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Duplicate_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Duplicate_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Duplicate_Btn.Location = new System.Drawing.Point(71, 339);
+			this.Duplicate_Btn.Name = "Duplicate_Btn";
+			this.Duplicate_Btn.Size = new System.Drawing.Size(62, 82);
+			this.Duplicate_Btn.TabIndex = 21;
+			this.Duplicate_Btn.Tag = "d";
+			this.Duplicate_Btn.Text = "D";
+			this.Duplicate_Btn.UseVisualStyleBackColor = false;
+			this.Duplicate_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
-			// button23
+			// Pop_Btn
 			// 
-			this.button23.BackColor = System.Drawing.Color.White;
-			this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button23.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button23.ForeColor = System.Drawing.Color.DeepSkyBlue;
-			this.button23.Location = new System.Drawing.Point(3, 339);
-			this.button23.Name = "button23";
-			this.button23.Size = new System.Drawing.Size(62, 82);
-			this.button23.TabIndex = 22;
-			this.button23.Text = "Pop";
-			this.button23.UseVisualStyleBackColor = false;
+			this.Pop_Btn.BackColor = System.Drawing.Color.White;
+			this.Pop_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Pop_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Pop_Btn.ForeColor = System.Drawing.Color.DeepSkyBlue;
+			this.Pop_Btn.Location = new System.Drawing.Point(3, 339);
+			this.Pop_Btn.Name = "Pop_Btn";
+			this.Pop_Btn.Size = new System.Drawing.Size(62, 82);
+			this.Pop_Btn.TabIndex = 22;
+			this.Pop_Btn.Tag = "p";
+			this.Pop_Btn.Text = "Pop";
+			this.Pop_Btn.UseVisualStyleBackColor = false;
+			this.Pop_Btn.Click += new System.EventHandler(this.BtnPress);
 			// 
 			// tableLayoutPanel3
 			// 
 			this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.tableLayoutPanel3.ColumnCount = 1;
 			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-			this.tableLayoutPanel3.Controls.Add(this.listBox1, 0, 1);
+			this.tableLayoutPanel3.Controls.Add(this.Cumulator_Label, 0, 0);
+			this.tableLayoutPanel3.Controls.Add(this.Pile_List, 0, 1);
 			this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel3.Location = new System.Drawing.Point(351, 3);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -437,48 +483,42 @@
 			this.tableLayoutPanel3.Size = new System.Drawing.Size(175, 424);
 			this.tableLayoutPanel3.TabIndex = 1;
 			// 
-			// label1
+			// Cumulator_Label
 			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.White;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(3, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(169, 40);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "1001";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Cumulator_Label.AutoSize = true;
+			this.Cumulator_Label.BackColor = System.Drawing.Color.White;
+			this.Cumulator_Label.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Cumulator_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Cumulator_Label.Location = new System.Drawing.Point(3, 0);
+			this.Cumulator_Label.Name = "Cumulator_Label";
+			this.Cumulator_Label.Size = new System.Drawing.Size(169, 40);
+			this.Cumulator_Label.TabIndex = 0;
+			this.Cumulator_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// listBox1
+			// Pile_List
 			// 
-			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 20;
-			this.listBox1.Items.AddRange(new object[] {
-            "000",
-            "111",
-            "222"});
-			this.listBox1.Location = new System.Drawing.Point(3, 43);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(169, 378);
-			this.listBox1.TabIndex = 1;
+			this.Pile_List.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Pile_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Pile_List.FormattingEnabled = true;
+			this.Pile_List.ItemHeight = 20;
+			this.Pile_List.Location = new System.Drawing.Point(3, 43);
+			this.Pile_List.Name = "Pile_List";
+			this.Pile_List.Size = new System.Drawing.Size(169, 378);
+			this.Pile_List.TabIndex = 1;
 			// 
-			// label2
+			// Error_Label
 			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.White;
-			this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.Red;
-			this.label2.Location = new System.Drawing.Point(7, 437);
-			this.label2.Margin = new System.Windows.Forms.Padding(7);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(334, 97);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "label2";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Error_Label.AutoSize = true;
+			this.Error_Label.BackColor = System.Drawing.Color.White;
+			this.Error_Label.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Error_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Error_Label.ForeColor = System.Drawing.Color.Red;
+			this.Error_Label.Location = new System.Drawing.Point(7, 437);
+			this.Error_Label.Margin = new System.Windows.Forms.Padding(7);
+			this.Error_Label.Name = "Error_Label";
+			this.Error_Label.Size = new System.Drawing.Size(334, 97);
+			this.Error_Label.TabIndex = 2;
+			this.Error_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// Form1
 			// 
@@ -501,33 +541,33 @@
 
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button9;
-		private System.Windows.Forms.Button button10;
-		private System.Windows.Forms.Button button11;
-		private System.Windows.Forms.Button button12;
-		private System.Windows.Forms.Button button13;
-		private System.Windows.Forms.Button button14;
-		private System.Windows.Forms.Button button15;
-		private System.Windows.Forms.Button button16;
-		private System.Windows.Forms.Button button17;
-		private System.Windows.Forms.Button button18;
-		private System.Windows.Forms.Button button19;
-		private System.Windows.Forms.Button button20;
-		private System.Windows.Forms.Button button21;
-		private System.Windows.Forms.Button button22;
-		private System.Windows.Forms.Button button23;
+		private System.Windows.Forms.Button _7;
+		private System.Windows.Forms.Button _8;
+		private System.Windows.Forms.Button _9;
+		private System.Windows.Forms.Button Add_Btn;
+		private System.Windows.Forms.Button Substract_Btn;
+		private System.Windows.Forms.Button Negate_Btn;
+		private System.Windows.Forms.Button _6;
+		private System.Windows.Forms.Button _5;
+		private System.Windows.Forms.Button _4;
+		private System.Windows.Forms.Button Sqaure_Btn;
+		private System.Windows.Forms.Button Multiply_Btn;
+		private System.Windows.Forms.Button _3;
+		private System.Windows.Forms.Button _2;
+		private System.Windows.Forms.Button _1;
+		private System.Windows.Forms.Button Modolu_Btn;
+		private System.Windows.Forms.Button Division_Btn;
+		private System.Windows.Forms.Button Enter_Btn;
+		private System.Windows.Forms.Button Back_Btn;
+		private System.Windows.Forms.Button _0;
+		private System.Windows.Forms.Button Reset_Btn;
+		private System.Windows.Forms.Button Swap_Btn;
+		private System.Windows.Forms.Button Duplicate_Btn;
+		private System.Windows.Forms.Button Pop_Btn;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ListBox listBox1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label Cumulator_Label;
+		private System.Windows.Forms.ListBox Pile_List;
+		private System.Windows.Forms.Label Error_Label;
 	}
 }
 

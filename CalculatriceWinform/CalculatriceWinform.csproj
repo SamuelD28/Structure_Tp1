@@ -78,5 +78,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatriceLib\CalculatriceLib.csproj">
+      <Project>{e06283ef-3a69-4319-bff6-4d118932fe1c}</Project>
+      <Name>CalculatriceLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Calculatrice\Calculatrice.csproj">
+      <Project>{38b73061-47ad-481c-b735-6062eff7109d}</Project>
+      <Name>Calculatrice</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -64,6 +64,7 @@ namespace SDD.Class
 		{
 			Calculatrice initialCalc = (Calculatrice)Cloner();
 			List<CalcCommande> listeCommandes = commandes.Cast<CalcCommande>().ToList();
+
 			foreach (CalcCommande commande in listeCommandes)
 			{
 				if (!Enum.IsDefined(typeof(CalcCommande), commande))
@@ -123,7 +124,6 @@ namespace SDD.Class
 
 			}
 		}
-
 
 		/// <summary>
 		/// Methods that receives an Array of command and convert it to a list to pass it to the original execute method
