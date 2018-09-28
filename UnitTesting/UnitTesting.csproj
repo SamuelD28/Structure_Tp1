@@ -53,6 +53,9 @@
     <Compile Include="TesterCalc.cs" />
     <Compile Include="TesterPile.cs" />
     <Compile Include="TesterPile_Liste.cs" />
+    <Compile Include="TesterPile_ListeChainée.cs" />
+    <Compile Include="TesterPile_ListeInverse.cs" />
+    <Compile Include="TesterPile_Pile.cs" />
     <Compile Include="TesterÉtat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

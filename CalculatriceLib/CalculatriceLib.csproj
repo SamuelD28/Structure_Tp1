@@ -44,7 +44,11 @@
     <Compile Include="IAccumuleur.cs" />
     <Compile Include="IPileCalc.cs" />
     <Compile Include="IÉtatCalc.cs" />
+    <Compile Include="Noeud.cs" />
+    <Compile Include="PileCalcInverse.cs" />
     <Compile Include="PileCalcListe.cs" />
+    <Compile Include="PileCalcListeChainée.cs" />
+    <Compile Include="PileCalcPile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="ÉtatCalc.cs" />

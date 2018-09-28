@@ -14,3 +14,19 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceWinform\obj\Debug\C
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceWinform\obj\Debug\CalculatriceWinform.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceWinform\obj\Debug\CalculatriceWinform.exe
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceWinform\obj\Debug\CalculatriceWinform.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.csprojAssemblyReference.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.Form1.resources
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.Properties.Resources.resources
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.csproj.GenerateResource.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.csproj.CoreCompileInputs.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\CalculatriceWinform.exe.config
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\CalculatriceWinform.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\CalculatriceWinform.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\Calculatrice.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\CalculatriceLib.dll
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\CalculatriceLib.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\Calculatrice.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\bin\Debug\Calculatrice.exe.config
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.csproj.CopyComplete
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\CalculatriceWinform\obj\Debug\CalculatriceWinform.pdb

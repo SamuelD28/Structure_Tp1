@@ -62,3 +62,13 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\État\obj\Debug\État.csproj.Co
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\État\obj\Debug\État.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\État\obj\Debug\Calculatrice.exe
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\État\obj\Debug\Calculatrice.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\obj\Debug\État.csproj.CoreCompileInputs.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\bin\Debug\Calculatrice.exe.config
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\bin\Debug\Calculatrice.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\bin\Debug\Calculatrice.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\bin\Debug\CalculatriceLib.dll
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\bin\Debug\CalculatriceLib.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\obj\Debug\État.csprojAssemblyReference.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\obj\Debug\État.csproj.CopyComplete
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\obj\Debug\Calculatrice.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\État\obj\Debug\Calculatrice.pdb

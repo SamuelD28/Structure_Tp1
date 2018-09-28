@@ -56,3 +56,13 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Pile\obj\Debug\Pile.csproj.Core
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Pile\obj\Debug\Pile.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Pile\obj\Debug\SamuelDube_Tp1.exe
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\Pile\obj\Debug\SamuelDube_Tp1.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csproj.CoreCompileInputs.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.exe.config
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\bin\Debug\SamuelDube_Tp1.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\bin\Debug\CalculatriceLib.dll
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\bin\Debug\CalculatriceLib.pdb
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csprojAssemblyReference.cache
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\obj\Debug\Pile.csproj.CopyComplete
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\obj\Debug\SamuelDube_Tp1.exe
+C:\Users\1489005\Source\Repos\Structure_Tp1\Pile\obj\Debug\SamuelDube_Tp1.pdb
