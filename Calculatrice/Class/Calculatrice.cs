@@ -212,7 +212,9 @@ namespace SDD.Class
 		{
 			Push();
 
-			if (EstVide || ListeÉléments.Count <= 1)
+			List<int> tempList = Pile.ToList();
+
+			if (EstVide || tempList.Count <= 1)
 			{
 				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
@@ -222,16 +224,16 @@ namespace SDD.Class
 			int firstNumber = 0;
 			int secondNumber = 0;
 
-			if (IsInt32(ListeÉléments[ListeÉléments.Count - 2]))
-				firstNumber = ListeÉléments[ListeÉléments.Count - 2];
+			if (IsInt32(tempList[tempList.Count - 2]))
+				firstNumber = tempList[tempList.Count - 2];
 			else
 			{
 				RétablirCalculatrice(initialCalc);
 				throw new OverflowException();
 			}
 
-			if (IsInt32(ListeÉléments[ListeÉléments.Count - 1]))
-				secondNumber = ListeÉléments[ListeÉléments.Count - 1];
+			if (IsInt32(tempList[tempList.Count - 1]))
+				secondNumber = tempList[tempList.Count - 1];
 			else
 			{
 				RétablirCalculatrice(initialCalc);
@@ -259,9 +261,9 @@ namespace SDD.Class
 
 			if (!IsInt32(result)) throw new OverflowException();
 
-			Pop();
-			ListeÉléments[ListeÉléments.Count - 1] = result;
-
+			tempList.RemoveAt(tempList.Count - 1);
+			tempList[tempList.Count - 1] = result;
+			Reset(tempList);
 		}
 
 		/// <summary>
@@ -400,7 +402,7 @@ namespace SDD.Class
 				List<int> tempList = Éléments.Cast<int>().ToList();
 				tempList[tempList.Count - 1] = (int)Éléments.ElementAt(Éléments.Count() - 2);
 				tempList[tempList.Count - 2] = (int)Dessus;
-				ListeÉléments = tempList;
+				Reset(tempList);
 			}
 
 

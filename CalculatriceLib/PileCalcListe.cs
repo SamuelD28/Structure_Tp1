@@ -22,7 +22,7 @@ namespace SDD.Class
         /// <summary>
         /// Property that stores a list of int value passed to this class
         /// </summary>
-        internal List<int> ListeÉléments { get;  set; }
+        public List<int> ListeÉléments { get;  set; }
 
         /// <summary>
         /// Property that returns the values stored inside the ListeÉlément property
@@ -32,6 +32,7 @@ namespace SDD.Class
         /// <summary>
         /// Property that reutrns the values stored inside ListÉlément but in the reverse order
         /// </summary>
+		/// 
         public IEnumerable<int> ÉlémentsInversés {
         get
             {

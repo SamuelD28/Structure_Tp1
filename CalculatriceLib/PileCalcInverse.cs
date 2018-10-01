@@ -12,13 +12,13 @@ namespace SDD.Class
         /// <summary>
         /// Cosntructor that can take an initial value of ListÉlément property
         /// </summary>
-        /// <param name="listeÉléments"></param>
-        public PileCalcListeInverse(IEnumerable<int> p_listeÉléments = null)
+        /// <param name="mPile.ListeÉléments"></param>
+        public PileCalcListeInverse(IEnumerable<int> listeÉléments = null)
         {
             ListeÉléments = new List<int>();
 
-            if (p_listeÉléments != null)
-                ListeÉléments.AddRange(p_listeÉléments);
+            if (listeÉléments != null)
+                ListeÉléments.AddRange(listeÉléments);
         }
 
 

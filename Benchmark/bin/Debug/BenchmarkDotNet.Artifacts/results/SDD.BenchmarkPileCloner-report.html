@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SDD.BenchmarkPileCloner</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.11.1, OS=Windows 10.0.17134.285 (1803/April2018Update/Redstone4)
+Intel Core i7-4790 CPU 3.60GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
+Frequency=3515626 Hz, Resolution=284.4444 ns, Timer=TSC
+  [Host]     : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0 DEBUG  [AttachedDebugger]
+  Job-YXHPOP : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0
+</code></pre>
+<pre><code>IterationTime=20.0000 ms  RunStrategy=Throughput  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>TypeDePile</th><th>      Mean</th><th>      Error</th><th>     StdDev</th>
+</tr>
+</thead><tbody><tr><td>ClonerPleine</td><td>Liste</td><td>782.09 ns</td><td>15.6030 ns</td><td>33.5871 ns</td>
+</tr><tr><td>ClonerPleine</td><td>ListeChainée</td><td>76,400,239.01 ns</td><td>1,262,227.5791 ns</td><td>1,180,688.3457 ns</td>
+</tr><tr><td>ClonerPleine</td><td>ListeInverse</td><td>769.26 ns</td><td>14.9490 ns</td><td>21.9120 ns</td>
+</tr><tr><td>ClonerPleine</td><td>Pile</td><td>18,452.50 ns</td><td>86.3508 ns</td><td>72.1068 ns</td>
+</tr><tr><td>ClonerVide</td><td>Liste</td><td>40.32 ns</td><td>0.9448 ns</td><td>1.3244 ns</td>
+</tr><tr><td>ClonerVide</td><td>ListeChainée</td><td>143.52 ns</td><td>2.8922 ns</td><td>2.8406 ns</td>
+</tr><tr><td>ClonerVide</td><td>ListeInverse</td><td>40.41 ns</td><td>0.8334 ns</td><td>1.0837 ns</td>
+</tr><tr><td>ClonerVide</td><td>Pile</td><td>99.54 ns</td><td>1.1226 ns</td><td>0.8765 ns</td>
+</tr></tbody></table>
+</body>
+</html>

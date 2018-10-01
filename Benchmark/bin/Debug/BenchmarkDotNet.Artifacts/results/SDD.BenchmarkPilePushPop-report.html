@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SDD.BenchmarkPilePushPop</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.11.1, OS=Windows 10.0.17134.285 (1803/April2018Update/Redstone4)
+Intel Core i7-4790 CPU 3.60GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
+Frequency=3515626 Hz, Resolution=284.4444 ns, Timer=TSC
+  [Host]     : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0 DEBUG  [AttachedDebugger]
+  Job-YXHPOP : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0
+</code></pre>
+<pre><code>IterationTime=20.0000 ms  RunStrategy=Throughput  
+</code></pre>
+
+<table>
+<thead><tr><th>           Method</th><th>TypeDePile</th><th>  Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>PushPop1_Vide</td><td>Liste</td><td>40.93 us</td><td>0.7896 us</td><td>0.7386 us</td>
+</tr><tr><td>PushPop1_Vide</td><td>ListeChainée</td><td>53.86 us</td><td>1.2936 us</td><td>1.5400 us</td>
+</tr><tr><td>PushPop1_Vide</td><td>ListeInverse</td><td>444.32 us</td><td>9.4716 us</td><td>7.9092 us</td>
+</tr><tr><td>PushPop1_Vide</td><td>Pile</td><td>22.69 us</td><td>0.4449 us</td><td>0.5940 us</td>
+</tr><tr><td>PushPop2_Pleine</td><td>Liste</td><td>40.01 us</td><td>0.6887 us</td><td>0.6105 us</td>
+</tr><tr><td>PushPop2_Pleine</td><td>ListeChainée</td><td>53.12 us</td><td>1.0164 us</td><td>1.1297 us</td>
+</tr><tr><td>PushPop2_Pleine</td><td>ListeInverse</td><td>42,816.24 us</td><td>811.7384 us</td><td>902.2450 us</td>
+</tr><tr><td>PushPop2_Pleine</td><td>Pile</td><td>22.41 us</td><td>0.2157 us</td><td>0.1801 us</td>
+</tr><tr><td>PushPop3_VidePleineVide</td><td>Liste</td><td>43.43 us</td><td>0.7486 us</td><td>0.6251 us</td>
+</tr><tr><td>PushPop3_VidePleineVide</td><td>ListeChainée</td><td>55.73 us</td><td>0.9810 us</td><td>0.9177 us</td>
+</tr><tr><td>PushPop3_VidePleineVide</td><td>ListeInverse</td><td>22,613.18 us</td><td>443.9633 us</td><td>607.7019 us</td>
+</tr><tr><td>PushPop3_VidePleineVide</td><td>Pile</td><td>23.50 us</td><td>0.3875 us</td><td>0.3435 us</td>
+</tr></tbody></table>
+</body>
+</html>

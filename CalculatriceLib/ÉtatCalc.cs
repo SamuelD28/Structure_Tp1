@@ -16,7 +16,7 @@ namespace SDD.Class
         public ÉtatCalc(IPileCalc pile = null, IAccumuleur acc = null)
         {
             mAccumuleur = (acc != null) ? (Accumuleur)acc : new Accumuleur();
-            mPile = (pile != null) ? mPile = (PileCalcListe)pile : new PileCalcListe();
+            mPile = (pile != null) ? pile : new PileCalcListe();
         }
 
         /// <summary>
@@ -65,13 +65,7 @@ namespace SDD.Class
         /// <summary>
         /// Pile Driver
         /// </summary>
-        protected PileCalcListe mPile { get; set; }
-
-		public List<int> ListeÉléments
-		{
-			get { return mPile.ListeÉléments; }
-			set { mPile.ListeÉléments = value; }
-		}
+        protected IPileCalc mPile { get; set; }
 
         /// <summary>
         /// Contains the cumulator value

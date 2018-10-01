@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SDD.BenchmarkPilePushPopGrandeur</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.11.1, OS=Windows 10.0.17134.285 (1803/April2018Update/Redstone4)
+Intel Core i7-4790 CPU 3.60GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
+Frequency=3515626 Hz, Resolution=284.4444 ns, Timer=TSC
+  [Host]     : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0
+  Job-YXHPOP : .NET Framework 4.7.2 (CLR 4.0.30319.42000), 32bit LegacyJIT-v4.7.3163.0
+</code></pre>
+<pre><code>IterationTime=20.0000 ms  RunStrategy=Throughput  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>TypeDePile</th><th>N</th><th>      Mean</th><th>   Error</th><th>  StdDev</th>
+</tr>
+</thead><tbody><tr><td>PushPop</td><td>Liste</td><td>1</td><td>10.573 us</td><td>0.4994 us</td><td>0.5344 us</td>
+</tr><tr><td>PushPop</td><td>Liste</td><td>10</td><td>10.459 us</td><td>0.2061 us</td><td>0.2752 us</td>
+</tr><tr><td>PushPop</td><td>Liste</td><td>100</td><td>10.595 us</td><td>0.2083 us</td><td>0.3242 us</td>
+</tr><tr><td>PushPop</td><td>Liste</td><td>1000</td><td>10.555 us</td><td>0.1749 us</td><td>0.1636 us</td>
+</tr><tr><td>PushPop</td><td>Liste</td><td>10000</td><td>10.247 us</td><td>0.1527 us</td><td>0.1428 us</td>
+</tr><tr><td>PushPop</td><td>Liste</td><td>100000</td><td>10.269 us</td><td>0.2220 us</td><td>0.2077 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>1</td><td>11.123 us</td><td>0.1194 us</td><td>0.1058 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>10</td><td>11.479 us</td><td>0.1830 us</td><td>0.1711 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>100</td><td>11.137 us</td><td>0.1519 us</td><td>0.1268 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>1000</td><td>11.249 us</td><td>0.1556 us</td><td>0.1455 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>10000</td><td>11.242 us</td><td>0.2174 us</td><td>0.1927 us</td>
+</tr><tr><td>PushPop</td><td>ListeChainée</td><td>100000</td><td>12.591 us</td><td>0.2231 us</td><td>0.2087 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>1</td><td>630.793 us</td><td>10.4226 us</td><td>9.7493 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>10</td><td>1,413.064 us</td><td>27.3969 us</td><td>29.3144 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>100</td><td>5,630.628 us</td><td>94.3497 us</td><td>88.2548 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>1000</td><td>42,754.202 us</td><td>605.8745 us</td><td>537.0919 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>10000</td><td>418,519.679 us</td><td>932.8211 us</td><td>728.2853 us</td>
+</tr><tr><td>PushPop</td><td>ListeInverse</td><td>100000</td><td>5,541,233.405 us</td><td>79,350.7386 us</td><td>66,261.4542 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>1</td><td>8.810 us</td><td>0.1740 us</td><td>0.1709 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>10</td><td>8.925 us</td><td>0.1186 us</td><td>0.1052 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>100</td><td>8.923 us</td><td>0.0904 us</td><td>0.0801 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>1000</td><td>8.911 us</td><td>0.1134 us</td><td>0.1005 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>10000</td><td>8.960 us</td><td>0.1762 us</td><td>0.1730 us</td>
+</tr><tr><td>PushPop</td><td>Pile</td><td>100000</td><td>8.827 us</td><td>0.0940 us</td><td>0.0879 us</td>
+</tr></tbody></table>
+</body>
+</html>

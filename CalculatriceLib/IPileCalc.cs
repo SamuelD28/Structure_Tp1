@@ -8,8 +8,8 @@ namespace SDD.Interface
 	/// </summary>
 	public interface IPileCalc
     {
-        IEnumerable<int> Éléments { get; }
-        IEnumerable<int> ÉlémentsInversés { get; }
+        IEnumerable<int> Éléments { get;}
+        IEnumerable<int> ÉlémentsInversés { get;}
         int Dessus { get; }
         bool EstVide { get; }
 

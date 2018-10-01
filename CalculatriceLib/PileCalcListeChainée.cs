@@ -15,31 +15,19 @@ namespace SDD.Class
         /// <param name="listeÉléments"></param>
         public PileCalcListeChainée(IEnumerable<int> listeÉléments = null)
         {
-            ListeÉléments = new List<Noeud>();
+			ListeÉléments = new LinkedList();
 
-            if (listeÉléments != null)
-                ListeÉléments.AddRange(listeÉléments.ParseListeNoeud());
+			if (listeÉléments != null)
+				ListeÉléments = new LinkedList(listeÉléments);
         }
 
         /// <summary>
         /// Property that stores a list of int value passed to this class
         /// </summary>
-        internal List<Noeud> ListeÉléments
+        internal LinkedList ListeÉléments
         {
             get;
             set;
-        }
-
-        private Noeud racine
-        {
-            get
-            {
-                return (ListeÉléments.Count > 0) ? ListeÉléments.ElementAt(0) : null;
-            }
-            set
-            {
-                racine = value;
-            }
         }
 
         /// <summary>
@@ -49,10 +37,7 @@ namespace SDD.Class
         {
             get
             {
-                foreach (Noeud noeud in ListeÉléments)
-                {
-                    yield return noeud.Valeur;
-                }
+				return ListeÉléments.ReturnAllNode().Reverse();
             }
         }
 
@@ -63,10 +48,7 @@ namespace SDD.Class
         {
             get
             {
-                foreach (Noeud noeud in ListeÉléments.AsEnumerable().Reverse())
-                {
-                    yield return noeud.Valeur;
-                }
+				return ListeÉléments.ReturnAllNode();
             }
         }
 
@@ -77,7 +59,7 @@ namespace SDD.Class
         {
             get
             {
-                return (ListeÉléments.Count > 0) ? (int)ListeÉléments[ListeÉléments.Count - 1].Valeur : throw new PileVideException();
+                return (ListeÉléments.Premier != null) ? ListeÉléments.Premier.Valeur : throw new PileVideException();
             }
         }
 
@@ -88,7 +70,7 @@ namespace SDD.Class
         {
             get
             {
-                return ListeÉléments.Count == 0;
+                return ListeÉléments.Premier is null;
             }
         }
 
@@ -98,7 +80,12 @@ namespace SDD.Class
         /// <returns></returns>
         public IPileCalc Cloner()
         {
-            return new PileCalcListeChainée(Éléments);
+			PileCalcListeChainée tempPile = new PileCalcListeChainée();
+
+			if(ListeÉléments != null)
+				tempPile.ListeÉléments = new LinkedList(ListeÉléments.Premier);
+
+            return tempPile;
         }
 
         /// <summary>
@@ -107,7 +94,7 @@ namespace SDD.Class
         public int Pop()
         {
             int lastElement = Dessus;
-            ListeÉléments.RemoveAt(ListeÉléments.Count - 1);
+            ListeÉléments.RemoveFirst();
             return lastElement;
         }
 
@@ -117,8 +104,7 @@ namespace SDD.Class
         /// <param name="nombre"></param>
         public void Push(int nombre)
         {
-            Noeud noeudCourant = new Noeud(nombre);
-            ListeÉléments.Add(noeudCourant);
+            ListeÉléments.AddFirst(nombre);
         }
 
         /// <summary>
@@ -129,29 +115,94 @@ namespace SDD.Class
         {
             ListeÉléments.Clear();
 
-            if (éléments != null)
-                ListeÉléments.AddRange(éléments.ParseListeNoeud());
+			if (éléments != null)
+				ListeÉléments = new LinkedList(éléments);
         }
     }
 
-    public static class ListExtensions
-    {
-        public static List<Noeud> ParseListeNoeud(this IEnumerable<int> enumerable)
-        {
-            List<Noeud> listeNoeuds = new List<Noeud>();
-            for (int i = 0; i < enumerable.Count(); i++)
-            {
-                Noeud noeudSuivant;
+	public class Node
+	{
+		public Node Suivant;
+		public int Valeur;
+	}
 
-                if (i + 1 < enumerable.Count())
-                    noeudSuivant = new Noeud(enumerable.ElementAt(i + 1));
-                else
-                    noeudSuivant = null;
+	public class LinkedList
+	{
+		public LinkedList()
+		{
 
-                Noeud noeudCourant = new Noeud(enumerable.ElementAt(i), noeudSuivant);
-                listeNoeuds.Add(noeudCourant);
-            }
-            return listeNoeuds;
-        }
-    }
+		}
+
+		public LinkedList(Node premier)
+		{
+			Premier = premier;
+		}
+
+		public LinkedList(IEnumerable<int> enumerable)
+		{
+			for (int i = 0; i < enumerable.Count(); i++)
+			{
+				int courant = enumerable.ElementAt(i);
+				AddFirst(courant);
+			}
+		}
+
+		public Node Premier;
+		public Node Dernier;
+
+		public IEnumerable<int> ReturnAllNode()
+		{
+			Node courante = Premier;
+			while (courante != null)
+			{
+				yield return courante.Valeur;
+				courante = courante.Suivant;
+			}
+		}
+
+		public void Clear()
+		{
+			Premier = null;
+		}
+
+		public void RemoveFirst()
+		{
+			Premier = Premier.Suivant;
+		}
+
+		public void AddFirst(int valeur)
+		{
+			Node noeud = new Node();
+			noeud.Valeur = valeur;
+			noeud.Suivant = Premier;
+			Premier = noeud;
+
+			if (noeud.Suivant is null)
+				Dernier = noeud;
+		}
+
+		public void AddLast(int valeur)
+		{
+			if (Premier == null)
+			{
+				Premier = new Node();
+
+				Premier.Valeur = valeur;
+				Premier.Suivant = null;
+			}
+			else
+			{
+				Node noeud = new Node();
+				noeud.Valeur = valeur;
+
+				Node courante = Premier;
+				while (courante.Suivant != null)
+				{
+					courante = courante.Suivant;
+				}
+
+				courante.Suivant = noeud;
+			}
+		}
+	}
 }
