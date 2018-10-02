@@ -175,11 +175,11 @@ namespace SDD.Utility
 		/// </summary>
 		/// <param name="str"></param>
 		/// <returns></returns>
-		public static int ExtractInt32(this string str)
+		public static long ExtractInt32(this string str)
 		{
 			try
 			{
-				return Convert.ToInt32(str);
+				return Convert.ToInt64(str);
 			}
 			catch (OverflowException)
 			{

@@ -192,6 +192,7 @@
     <Compile Include="TesterCalc.cs" />
     <Compile Include="TesterFabriquePile.cs" />
     <Compile Include="TesterPile.cs" />
+    <Compile Include="TesterPileGen.cs" />
     <Compile Include="TesterPile_Liste.cs" />
     <Compile Include="TesterPile_ListeChainée.cs" />
     <Compile Include="TesterPile_ListeInverse.cs" />

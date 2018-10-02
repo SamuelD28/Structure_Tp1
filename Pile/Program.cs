@@ -1,4 +1,5 @@
 ﻿using SDD.Class;
+using SDD.Interface;
 using SDD.Utility;
 using System;
 using static SDD.Interface.IPileCalcExtensions;
@@ -22,7 +23,7 @@ namespace SamuelDube_Tp1
         /// </summary>
         void Principal()
         {
-            PileCalcListe pile = new PileCalcListe();
+            PileCalcListeGen<long> pile = new PileCalcListeGen<long>();
             for (; ; )
             {
                 DisplayPileContent(pile);
@@ -48,7 +49,7 @@ namespace SamuelDube_Tp1
         /// Method that display the content of the current on the screen
         /// </summary>
         /// <param name="pile"></param>
-        private void DisplayPileContent(PileCalcListe pile)
+        private void DisplayPileContent<T>(PileCalcListeGen<T> pile)
         {
             ChangeConsoleColor(ConsoleColor.Green, ConsoleColor.Black);
             WriteLine(pile.EnTexte().PadRight(50));
