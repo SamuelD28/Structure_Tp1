@@ -31,16 +31,23 @@ namespace SamuelDube_Tp1
 
                 string userInput = DisplayUserInput();
 
-                if (userInput.IsNumberSyntaxOkay(true))
-                    pile.Push(userInput.ExtractInt32());
-                else if (userInput == "p")
-                    pile.Pop();
-                else if (userInput == "r")
-                    pile.Reset();
-                else if (userInput == "e")
-                    Environment.Exit(0);
-                else
-                    DisplayInvalidInstruction("The instruction entered is invalid");
+                try
+                {
+                    if (userInput.IsNumberSyntaxOkay(true))
+                        pile.Push(userInput.ExtractInt32());
+                    else if (userInput == "p")
+                        pile.Pop();
+                    else if (userInput == "r")
+                        pile.Reset();
+                    else if (userInput == "e")
+                        Environment.Exit(0);
+                    else
+                        DisplayInvalidInstruction("The instruction entered is invalid");
+                }
+                catch (Exception e)
+                {
+                    DisplayInvalidInstruction(e.Message);
+                }
 
             }
         }

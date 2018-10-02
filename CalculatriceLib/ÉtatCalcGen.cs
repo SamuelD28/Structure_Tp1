@@ -2,21 +2,23 @@
 using System;
 using System.Collections.Generic;
 using static SDD.Utility.StringExtensions;
+using static SDD.Class.ÉtatCalcGenUtils;
 using static SDD.Class.ÉtatCalcUtils;
 
 namespace SDD.Class
 {
-    public class ÉtatCalc : IÉtatCalc
+    public class ÉtatCalcGen<T> : IÉtatCalcGen<T>
+        where T : struct
     {
         /// <summary>
         /// Constructor that takes a PileCalcList and a Accumulator as parameters
         /// </summary>
         /// <param name="pile">Set to null by default</param>
         /// <param name="acc">Set to null by default</param>
-        public ÉtatCalc(IPileCalc pile = null, IAccumuleur acc = null)
+        public ÉtatCalcGen(IPileCalcGen<T> pile = null, IAccumuleurGen<T> acc = null)
         {
-            mAccumuleur = (acc != null) ? (Accumuleur)acc : new Accumuleur();
-            mPile = (pile != null) ? pile : new PileCalcListe();
+            mAccumuleur = (acc != null) ? (AccumuleurGen<T>)acc : new AccumuleurGen<T>();
+            mPile = (pile != null) ? pile : new PileCalcListeGen<T>();
         }
 
         /// <summary>
@@ -24,10 +26,10 @@ namespace SDD.Class
         /// </summary>
         /// <param name="accumulateur"></param>
         /// <param name="pile"></param>
-        public ÉtatCalc(int? accumulateur, params int[] pile)
+        public ÉtatCalcGen(T? accumulateur, params T[] pile)
         {
-            mPile = (pile != null) ? new PileCalcListe(pile) : new PileCalcListe();
-            mAccumuleur = (accumulateur != null) ? new Accumuleur(accumulateur) : new Accumuleur();
+            mPile = (pile != null) ? new PileCalcListeGen<T>(pile) : new PileCalcListeGen<T>();
+            mAccumuleur = (accumulateur != null) ? new AccumuleurGen<T>(accumulateur) : new AccumuleurGen<T>();
         }
 
         /// <summary>
@@ -35,17 +37,17 @@ namespace SDD.Class
         /// </summary>
         /// <param name="pile"></param>
         /// <param name="accumulateur"></param>
-        public ÉtatCalc(IEnumerable<int> pile, int? accumulateur = null)
+        public ÉtatCalcGen(IEnumerable<T> pile, T? accumulateur = null)
         {
-            mPile = new PileCalcListe(pile);
-            mAccumuleur = (accumulateur != null) ? new Accumuleur(accumulateur) : new Accumuleur();
+            mPile = new PileCalcListeGen<T>(pile);
+            mAccumuleur = (accumulateur != null) ? new AccumuleurGen<T>(accumulateur) : new AccumuleurGen<T>();
         }
 
         /// <summary>
         /// Constructor that can initialise the pile and cumulator by parsing a string passed as an argument
         /// </summary>
         /// <param name="enTexte"></param>
-        public ÉtatCalc(string enTexte)
+        public ÉtatCalcGen(string enTexte)
         {
             char[] separator = new char[] { ' ' };
             string[] strArray = enTexte.ParseStringToArray(separator);
@@ -53,29 +55,29 @@ namespace SDD.Class
             if (!IsStateStringOkay(strArray))
                 throw new ArgumentException();
 
-            mPile = new PileCalcListe(ParsePile(strArray));
-            mAccumuleur = new Accumuleur(ParseCumulator(strArray));
+            mPile = new PileCalcListeGen<T>(ParsePile<T>(strArray));
+            mAccumuleur = new AccumuleurGen<T>(ParseCumulator<T>(strArray));
         }
 
         /// <summary>
         /// Cumulator Driver
         /// </summary>
-        protected Accumuleur mAccumuleur { get; set; }
+        protected AccumuleurGen<T> mAccumuleur { get; set; }
 
         /// <summary>
         /// Pile Driver
         /// </summary>
-        protected IPileCalc mPile { get; set; }
+        protected IPileCalcGen<T> mPile { get; set; }
 
         /// <summary>
         /// Contains the cumulator value
         /// </summary>
-        public int? Accumulateur => mAccumuleur.Valeur;
+        public T? Accumulateur => mAccumuleur.Valeur;
 
         /// <summary>
         /// Contains the stack of value inside the pile driver
         /// </summary>
-        public IEnumerable<int> Pile => mPile.Éléments;
+        public IEnumerable<T> Pile => mPile.Éléments;
 
         /// <summary>
         /// Indicate wheter the state is empty by checking inside the pile and cumulator driver
@@ -85,7 +87,7 @@ namespace SDD.Class
         /// <summary>
         /// Returns the cumulator value or the first element inside the pile stack
         /// </summary>
-        public int? Dessus => (Accumulateur != null) ? Accumulateur: (Pile != null) ? mPile.Dessus : throw new PileVideException();
+        public T? Dessus => (Accumulateur != null) ? Accumulateur: (Pile != null) ? mPile.Dessus : throw new PileVideException();
 
         /// <summary>
         /// Methods that stack a new number inside thye cumulator value
@@ -97,7 +99,7 @@ namespace SDD.Class
         /// Method that duplicate the current state inside a new object
         /// </summary>
         /// <returns></returns>
-        public IÉtatCalc Cloner() => new ÉtatCalc(EnTexte());
+        public IÉtatCalcGen<T> Cloner() => new ÉtatCalcGen<T>(EnTexte());
 
         /// <summary>
         /// Method that trim the last number inside the cumulator value
@@ -121,7 +123,7 @@ namespace SDD.Class
                     AccumuleurVideException();
 
             if (Accumulateur != null)
-                mPile.Push((int)mAccumuleur.Extraire());
+                mPile.Push((T)mAccumuleur.Extraire());
         }
 
         /// <summary>
@@ -140,22 +142,22 @@ namespace SDD.Class
         /// Method that remove either the cumulator value if its not empty of the last element added to the pile stack
         /// </summary>
         /// <returns></returns>
-        public int Pop()
+        public T Pop()
         {
-            return (Accumulateur != null) ? (int)mAccumuleur.Extraire() : mPile.Pop();
+            return (Accumulateur != null) ? (T)mAccumuleur.Extraire() : mPile.Pop();
         }
 
         /// <summary>
         /// Method that adds a new element to the pile stack
         /// </summary>
         /// <param name="nombre"></param>
-        public void Push(int? nombre = null)
+        public void Push(T? nombre = null)
         {
             if (Accumulateur != null)
-                mPile.Push((int)mAccumuleur.Extraire());
+                mPile.Push((T)mAccumuleur.Extraire());
 
 			if(nombre != null)
-				mPile.Push((int)nombre);
+				mPile.Push((T)nombre);
         }
 
         /// <summary>
@@ -163,11 +165,11 @@ namespace SDD.Class
         /// </summary>
         /// <param name="pile"></param>
         /// <param name="accumulateur"></param>
-        public void Reset(IEnumerable<int> pile = null, int? accumulateur = null)
+        public void Reset(IEnumerable<T> pile = null, T? accumulateur = null)
         {
             mAccumuleur.Reset(accumulateur);
 
-            if (accumulateur > 0 || accumulateur is null)
+            if (accumulateur.ToString().Contains("-") || accumulateur is null)
                 mPile.Reset(pile);
         }
 
@@ -176,7 +178,7 @@ namespace SDD.Class
         /// </summary>
         /// <param name="accumulateur"></param>
         /// <param name="pile"></param>
-        public void Reset(int? accumulateur, params int[] pile)
+        public void Reset(T? accumulateur, params T[] pile)
         {
             mAccumuleur.Reset(accumulateur);
             mPile.Reset(pile);
@@ -187,7 +189,7 @@ namespace SDD.Class
         /// </summary>
         /// <param name="pile"></param>
         /// <param name="acc"></param>
-        public void Reset(IPileCalc pile, IAccumuleur acc = null)
+        public void Reset(IPileCalcGen<T> pile, IAccumuleurGen<T> acc = null)
         {
             mPile.Reset(pile.Éléments);
             mAccumuleur.Reset(acc.Valeur);
@@ -205,55 +207,20 @@ namespace SDD.Class
             if (!IsStateStringOkay(strArray))
                 throw new ArgumentException();
 
-            Reset(ParsePile(strArray), ParseCumulator(strArray));
+            Reset(ParsePile<T>(strArray), ParseCumulator<T>(strArray));
         }
     }
 
-    public class ÉtatCalcUtils
+    public class ÉtatCalcGenUtils
     {
-        /// <summary>
-        /// Boolean method that verify that the string used to initiate/reset the state is okay. Return false if not
-        /// </summary>
-        /// <param name="strArray"></param>
-        /// <returns></returns>
-        public static bool IsStateStringOkay(string[] strArray)
-        {
-            if (strArray != null)
-            {
-                for (int i = 0; i < strArray.Length; i++)
-                {
-                    string element = strArray.GetValue(i).ToString();
-
-                    if (element.Contains("?") && element.Contains("-"))
-                        return false;
-                    else if (element.Contains("?") && i == 0 && strArray.Length > 1)
-                        return false;
-                    else if (!element.IsNumberSyntaxOkay(true, new char[] { ',', '.' }))
-                        return false;
-                    else
-                    {
-						try
-						{
-							int result = Int32.Parse(element.Trim(new char[] { ',', '?' })); ;
-						}
-						catch(Exception)
-						{
-							return false;
-						}
-                    }
-                }
-            }
-            return true;
-        }
-
         /// <summary>
         /// Method that parses the pile stacks out of a string array. Returns an empty List<int> if the string array is null or empty
         /// </summary>
         /// <param name="strArray"></param>
         /// <returns></returns>
-        public static IEnumerable<int> ParsePile(string[] strArray)
+        public static IEnumerable<T> ParsePile<T>(string[] strArray)
         {
-            List<int> pileInt = new List<int>();
+            List<T> pileInt = new List<T>();
 
             if (strArray is null) return pileInt;
 
@@ -262,9 +229,9 @@ namespace SDD.Class
                 string element = strArray.GetValue(i).ToString();
 
                 if (element.Contains("-"))
-                    pileInt.Add(Convert.ToInt32(element));
+                    pileInt.Add((T)Convert.ChangeType(element, typeof(T)));
                 else if (element.IsNumberSyntaxOkay(nullAccepted: false))
-                    pileInt.Add(Convert.ToInt32(element));
+                    pileInt.Add((T)Convert.ChangeType(element, typeof(T)));
             }
 
             return pileInt;
@@ -275,9 +242,9 @@ namespace SDD.Class
         /// </summary>
         /// <param name="strArray"></param>
         /// <returns></returns>
-        public static int? ParseCumulator(string[] strArray)
+        public static T ParseCumulator<T>(string[] strArray)
         {
-            int? cumulatorValue = null;
+            T cumulatorValue = default(T);
 
             if (strArray is null) return cumulatorValue;
 
@@ -286,7 +253,7 @@ namespace SDD.Class
                 string element = strArray.GetValue(i).ToString();
 
                 if (element.Contains("?"))
-                    cumulatorValue = Convert.ToInt32(element.Trim('?'));
+                    cumulatorValue = (T)Convert.ChangeType(element.Trim('?'), typeof(T));
             }
 
             return cumulatorValue;

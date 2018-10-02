@@ -21,7 +21,7 @@ namespace SDD
         /// </summary>
         void Principal()
         {
-            Accumuleur accumuleur = new Accumuleur((string)null);
+            AccumuleurGen<short> accumuleur = new AccumuleurGen<short>((string)null);
             for( ; ; )
             {
                 DisplayCumulatorContent(accumuleur);
@@ -29,32 +29,39 @@ namespace SDD
 
                 char choix = DisplayKeyPress();
 
-                if (choix.IsNumber())
+                try
                 {
-                    accumuleur.Accumuler(choix);
-                    Clear();
+                    if (choix.IsNumber())
+                    {
+                        accumuleur.Accumuler(choix);
+                        Clear();
+                    }
+                    else if (choix == 'e')
+                    {
+                        accumuleur.Extraire();
+                        Clear();
+                    }
+                    else if (choix == 'd')
+                    {
+                        accumuleur.Décumuler();
+                        Clear();
+                    }
+                    else if (choix == 'r')
+                    {
+                        accumuleur.Reset();
+                        Clear();
+                    }
+                    else if (choix == 'x')
+                    {
+                        Environment.Exit(0);
+                    }
+                    else
+                        DisplayInvalidInstruction("The instruction entered is unhandled at the moment");
                 }
-                else if (choix == 'e')
+                catch (Exception e)
                 {
-                    accumuleur.Extraire();
-                    Clear();
+                    DisplayInvalidInstruction(e.Message);
                 }
-                else if (choix == 'd')
-                {
-                    accumuleur.Décumuler();
-                    Clear();
-                }
-                else if (choix == 'r')
-                {
-                    accumuleur.Reset();
-                    Clear();
-                }
-                else if (choix == 'x')
-                {
-                    Environment.Exit(0);
-                }
-                else
-                    DisplayInvalidInstruction("The instruction entered is unhandled at the moment");
 
             }
         }
@@ -63,7 +70,7 @@ namespace SDD
         /// Method that display the current cummulator content on the screen
         /// </summary>
         /// <param name="accumuleur">Cumulator content to display</param>
-        private static void DisplayCumulatorContent(Accumuleur accumuleur)
+        private static void DisplayCumulatorContent(AccumuleurGen<short> accumuleur)
         {
             ChangeConsoleColor(ConsoleColor.Cyan, ConsoleColor.Black);
             WriteLine(accumuleur.Accumulation.PadRight(50));

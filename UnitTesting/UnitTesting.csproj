@@ -188,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TesterAcc.cs" />
+    <Compile Include="TesterAccGen.cs" />
     <Compile Include="TesterBatch %281%29.cs" />
     <Compile Include="TesterCalc.cs" />
     <Compile Include="TesterFabriquePile.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="TesterPile_Pile.cs" />
     <Compile Include="TesterÉtat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesterÉtatGen.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CalculatriceLib\CalculatriceLib.csproj">
