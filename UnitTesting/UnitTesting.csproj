@@ -191,6 +191,7 @@
     <Compile Include="TesterAccGen.cs" />
     <Compile Include="TesterBatch %281%29.cs" />
     <Compile Include="TesterCalc.cs" />
+    <Compile Include="TesterCalcAlu.cs" />
     <Compile Include="TesterFabriquePile.cs" />
     <Compile Include="TesterPile.cs" />
     <Compile Include="TesterPileGen.cs" />

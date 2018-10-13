@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace CalculatriceLib
 {
-	public interface IAlu
+	public interface IAlu<T>
+		where T : struct
 	{
-		int Carré(int a);
-		int Négation(int a);
+		Func<T, T> Carré { get; }
+		Func<T, T> Négation { get; }
 
-		int Additionner(int a, int b);
-		int Soustraire(int a, int b);
-		int Multiplier(int a, int b);
-		int Diviser(int a, int b);
-		int Modulo(int a, int b);
+		Func<T ,T , T> Additionner { get; }
+		Func<T, T, T> Soustraire { get; }
+		Func<T, T, T> Multiplier { get; }
+		Func<T, T, T> Diviser { get; }
+		Func<T, T, T> Modulo { get; }
 	}
 }

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
-using SDD.Interface;
 using SDD.Class;
+using SDD.Interface;
+using static Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace SDD
 {
@@ -25,9 +25,9 @@ namespace SDD
     {
         public override object MaxValue => int.MaxValue;
 
-        public override ICalculatrice NewCalc(string accumulateur, params int[] pile)
+        public override ICalculatrice NewCalc(string Accumuleur, params int[] pile)
         {
-            return new Calculatrice(new PileCalcListe(pile), new Accumuleur(accumulateur));
+            return new Calculatrice(new PileCalcListe(pile), new Accumuleur(Accumuleur));
         }
 
         public override ICalculatrice NewCalc(string étatString)
@@ -39,10 +39,10 @@ namespace SDD
 
     public abstract class TesterCalcAluBase : TesterCalcBase
     {
-        public override ICalculatrice NewCalc(string accumulateur, params int[] pile)
+        public override ICalculatrice NewCalc(string Accumuleur, params int[] pile)
         {
-            accumulateur = string.IsNullOrWhiteSpace(accumulateur) ? "" : accumulateur + "?";
-            return NewCalc(string.Join("", pile.Select(elem => elem + "  ")) + accumulateur + "?");
+            Accumuleur = string.IsNullOrWhiteSpace(Accumuleur) ? "" : Accumuleur + "?";
+            return NewCalc(string.Join("", pile.Select(elem => elem + "  ")) + Accumuleur);
         }
     }
 
@@ -50,7 +50,7 @@ namespace SDD
     public abstract class TesterCalcBase
     {
         public abstract object MaxValue { get; }
-        public abstract ICalculatrice NewCalc(string accumulateur, params int[] pile);
+        public abstract ICalculatrice NewCalc(string Accumuleur, params int[] pile);
         public abstract ICalculatrice NewCalc(string étatString);
 
         public ICalculatrice NewCalc(params int[] pile)
@@ -567,8 +567,8 @@ namespace SDD
             Vérifier("r 3d* 4d* +", "25");  
             Vérifier("r 3² 4² +", "25");    
             Vérifier("r3e4s²s²+", "25");
-			Vérifier("r5n²e4n²-", "9"); 
-		}
+            Vérifier("r5n²e4n²-", "9");
+        }
 
         [TestMethod]
         public void _72_ResteEtModulo()

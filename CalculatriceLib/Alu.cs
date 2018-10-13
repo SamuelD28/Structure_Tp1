@@ -1,25 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculatriceLib
 {
-	class Alu : IAlu
+	public class Alu<T> : IAlu<T>
+		where T : struct
 	{
-		public int Additionner(int a, int b) => checked(a + b);
+		public AluGen(Func<T, T> carré, 
+			Func<T, T> négation, 
+			Func<T, T, T> additionner, 
+			Func<T, T, T> soustraire, 
+			Func<T, T, T> multiplier, 
+			Func<T, T, T> diviser, 
+			Func<T, T, T> modulo)
+		{
+			Carré = carré;
+			Négation = négation;
+			Additionner = additionner;
+			Soustraire = soustraire;
+			Multiplier = multiplier;
+			Diviser = diviser;
+			Modulo = modulo;
+		}
 
-		public int Carré(int a) => checked((int)Math.Pow(a, 2));
+		public Func<T, T> Carré { get; }
+		public Func<T, T> Négation { get; }
 
-		public int Diviser(int a, int b) => checked(a / b);
-
-		public int Modulo(int a, int b) => checked(a % b);
-
-		public int Multiplier(int a, int b) => checked(a * b);
-
-		public int Négation(int a) => checked(a * -1);
-
-		public int Soustraire(int a, int b) => (a - b);
+		public Func<T, T, T> Additionner { get; }
+		public Func<T, T, T> Soustraire { get; }
+		public Func<T, T, T> Multiplier { get; }
+		public Func<T, T, T> Diviser { get; }
+		public Func<T, T, T> Modulo { get; }
 	}
 }

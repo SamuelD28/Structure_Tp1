@@ -180,7 +180,10 @@
     <Compile Include="Accumuleur.cs" />
     <Compile Include="AccumuleurGen.cs" />
     <Compile Include="Alu.cs" />
+    <Compile Include="AluKit.cs" />
     <Compile Include="Calculatrice.cs" />
+    <Compile Include="CalculatriceAlu.cs" />
+    <Compile Include="FabriqueCalc.cs" />
     <Compile Include="FabriquePile.cs" />
     <Compile Include="IAccumuleur.cs" />
     <Compile Include="IAccumuleurGen.cs" />

@@ -266,8 +266,8 @@ C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\bin\Debug\Micro
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\bin\Debug\System.Collections.Immutable.xml
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\bin\Debug\System.Reflection.Metadata.xml
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.csprojResolveAssemblyReference.cache
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.csproj.CoreCompileInputs.cache
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.csproj.CopyComplete
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.dll
 C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.pdb
+C:\Users\Sameul Dube\Source\Repos\Structure_Tp12\CalculatriceLib\obj\Debug\CalculatriceLib.csprojResolveAssemblyReference.cache
