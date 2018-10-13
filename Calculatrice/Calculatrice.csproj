@@ -181,8 +181,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Calculatrice.cs" />
-    <Compile Include="Interface\ICalculatrice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

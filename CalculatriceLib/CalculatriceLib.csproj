@@ -179,9 +179,13 @@
   <ItemGroup>
     <Compile Include="Accumuleur.cs" />
     <Compile Include="AccumuleurGen.cs" />
+    <Compile Include="Alu.cs" />
+    <Compile Include="Calculatrice.cs" />
     <Compile Include="FabriquePile.cs" />
     <Compile Include="IAccumuleur.cs" />
     <Compile Include="IAccumuleurGen.cs" />
+    <Compile Include="IAlu.cs" />
+    <Compile Include="ICalculatrice.cs" />
     <Compile Include="IPileCalcGen.cs" />
     <Compile Include="IPileCalc.cs" />
     <Compile Include="IÉtatCalcGen.cs" />
