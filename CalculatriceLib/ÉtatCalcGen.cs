@@ -51,12 +51,13 @@ namespace SDD.Class
         {
             char[] separator = new char[] { ' ' };
             string[] strArray = enTexte.ParseStringToArray(separator);
+			T cumulator = ParseCumulator<T>(strArray);
 
             if (!IsStateStringOkay(strArray))
                 throw new ArgumentException();
 
             mPile = new PileCalcListeGen<T>(ParsePile<T>(strArray));
-            mAccumuleur = new AccumuleurGen<T>(ParseCumulator<T>(strArray));
+            mAccumuleur = (Equals(cumulator, default(T)))?new AccumuleurGen<T>(): new AccumuleurGen<T>(cumulator);
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace SDD.Class
         /// <summary>
         /// Returns the cumulator value or the first element inside the pile stack
         /// </summary>
-        public T? Dessus => (Accumulateur != null) ? Accumulateur: (Pile != null) ? mPile.Dessus : throw new PileVideException();
+        public T? Dessus => (Accumulateur != null && !Equals(Accumulateur, default(T))) ? Accumulateur: (Pile != null) ? mPile.Dessus : throw new PileVideException();
 
         /// <summary>
         /// Methods that stack a new number inside thye cumulator value
@@ -256,7 +257,7 @@ namespace SDD.Class
                     cumulatorValue = (T)Convert.ChangeType(element.Trim('?'), typeof(T));
             }
 
-            return cumulatorValue;
+			return cumulatorValue;
         }
     }
 }

@@ -181,6 +181,7 @@
     <Compile Include="AccumuleurGen.cs" />
     <Compile Include="Alu.cs" />
     <Compile Include="AluKit.cs" />
+    <Compile Include="CalculatriceGen.cs" />
     <Compile Include="Calculatrice.cs" />
     <Compile Include="CalculatriceAlu.cs" />
     <Compile Include="FabriqueCalc.cs" />

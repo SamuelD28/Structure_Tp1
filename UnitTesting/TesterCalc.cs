@@ -166,8 +166,8 @@ namespace SDD
         [TestMethod]
         public void _07_Résultats()
         {
-            AreEqual(30, Convert.ToInt32(NewCalc(10, 20, 30).Résultat));
-            AreEqual(40, Convert.ToInt32(NewCalc("40", 10, 20, 30).Résultat));
+			AreEqual(30, Convert.ToInt32(NewCalc(10, 20, 30).Résultat));
+			AreEqual(40, Convert.ToInt32(NewCalc("40", 10, 20, 30).Résultat));
             ThrowsException<PileVideException>(()=>NewCalc().Résultat);
             AreEqual(MaxValue, NewCalc(MaxValue + "?").Résultat);
         }

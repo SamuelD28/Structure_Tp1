@@ -4,7 +4,7 @@ namespace CalculatriceLib
 {
 	public static class AluKit
 	{
-		public static readonly AluGen<int> AluInt = new AluGen<int>(
+		public static readonly Alu<int> AluInt = new Alu<int>(
 			carré:  a => ((int)(Math.Round(Math.Pow(a, 2)))),
 			négation: a => checked(a * -1),
 			additionner: (a, b)  => checked(a + b),
@@ -14,7 +14,7 @@ namespace CalculatriceLib
 			soustraire: (a, b) => (a - b)
 			);
 
-		public static readonly AluGen<short> Alu16 = new AluGen<short>(
+		public static readonly Alu<short> Alu16 = new Alu<short>(
 			carré: a => ((short)(Math.Round(Math.Pow(a, 2)))),
 			négation: a => checked((short)(a * -1)),
 			additionner: (a, b) => checked((short)(a + b)),
@@ -24,7 +24,7 @@ namespace CalculatriceLib
 			soustraire: (a, b) => ((short)(a - b))
 			);
 
-		public static readonly AluGen<int> Alu32 = new AluGen<int>(
+		public static readonly Alu<int> Alu32 = new Alu<int>(
 			carré: a => ((int)(Math.Round(Math.Pow(a, 2)))),
 			négation: a => checked(a * -1),
 			additionner: (a, b) => checked(a + b),
@@ -34,7 +34,7 @@ namespace CalculatriceLib
 			soustraire: (a, b) => (a - b)
 			);
 
-		public static readonly AluGen<long> Alu64 = new AluGen<long>(
+		public static readonly Alu<long> Alu64 = new Alu<long>(
 			carré: a => ((int)(Math.Round(Math.Pow(a, 2)))),
 			négation: a => checked(a * -1),
 			additionner: (a, b) => checked((a + b)),
@@ -44,7 +44,7 @@ namespace CalculatriceLib
 			soustraire: (a, b) => (a - b)
 			);
 
-		public static readonly AluGen<decimal> Alu128 = new AluGen<decimal>(
+		public static readonly Alu<decimal> Alu128 = new Alu<decimal>(
 			carré: a => ((decimal)(Math.Round(Math.Pow((double)a, 2)))),
 			négation: a => checked(a * -1),
 			additionner: (a, b) => checked(a + b),

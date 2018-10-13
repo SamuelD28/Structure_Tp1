@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using static System.Console;
 
 namespace SDD.Utility
@@ -88,6 +89,27 @@ namespace SDD.Utility
 		static public bool IsInt32(int number)
 		{
 			if (number >= Int32.MaxValue || number <= Int32.MinValue)
+				return false;
+			else
+				return true;
+		}
+
+		static public bool IsWithinRange<T>(T number)
+			where T : struct
+		{
+			Type numberType = typeof(T);
+			FieldInfo maxValueField = numberType.GetField("MaxValue", BindingFlags.Public | BindingFlags.Static);
+			FieldInfo minValueField = numberType.GetField("MinValue", BindingFlags.Public | BindingFlags.Static);
+
+			if (maxValueField == null)
+				throw new NotSupportedException(typeof(T).Name);
+			if (minValueField == null)
+				throw new NotSupportedException(typeof(T).Name);
+
+			dynamic maxValue = (T)maxValueField.GetValue(null);
+			dynamic minValue = (T)minValueField.GetValue(null);
+
+			if (number >= maxValue || number <= minValue)
 				return false;
 			else
 				return true;

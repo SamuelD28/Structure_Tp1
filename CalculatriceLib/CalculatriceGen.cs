@@ -7,40 +7,37 @@ using CalculatriceLib;
 
 namespace SDD.Class
 {
-	public class CalculatriceAlu : ÉtatCalc, ICalculatrice
+	public class Calculatrice<T> : ÉtatCalcGen<T>, ICalculatrice
+		where T : struct
 	{
 		/// <summary>
 		/// Constructor that takes a pile and an accumulator as arguments
 		/// </summary>
 		/// <param name="pile"></param>
 		/// <param name="acc"></param>
-		public CalculatriceAlu(IAlu<int> alu, IPileCalc pile = null, IAccumuleur acc = null) : base(pile, acc) { this.alu = alu; }
+		public Calculatrice(IAlu<T> alu, IPileCalcGen<T> pile = null, IAccumuleurGen<T> acc = null) : base(pile, acc) { this.alu = alu; }
 
 		/// <summary>
 		/// Constructor that takes an int cummulator and array of int for the pile content
 		/// </summary>
 		/// <param name="accumulateur"></param>
 		/// <param name="pile"></param>
-		public CalculatriceAlu(IAlu<int> alu, int? accumulateur, params int[] pile) : base(accumulateur, pile) { this.alu = alu; }
+		public Calculatrice(IAlu<T> alu, T? accumulateur, params T[] pile) : base(accumulateur, pile) { this.alu = alu; }
 
 		/// <summary>
 		/// Constructor that takes an IEnumerable for the pile and a int for the cumulator value
 		/// </summary>
 		/// <param name="pile"></param>
 		/// <param name="accumulateur"></param>
-		public CalculatriceAlu(IAlu<int> alu, IEnumerable<int> pile, int? accumulateur = null) : base(pile, accumulateur) { this.alu = alu; }
+		public Calculatrice(IAlu<T> alu, IEnumerable<T> pile, T? accumulateur = null) : base(pile, accumulateur) { this.alu = alu; }
 
 		/// <summary>
 		/// Constructor that can initialise the pile and cumulator with a string parameter
 		/// </summary>
 		/// <param name="enTexte"></param>
-		public CalculatriceAlu(IAlu<int> alu, string enTexte) : base(enTexte) { this.alu = alu; }
+		public Calculatrice(IAlu<T> alu,string enTexte) : base(enTexte) { this.alu = alu; }
 
-		//Membre alu
-		private IAlu<int> alu
-		{
-			get;
-		} 
+		public IAlu<T> alu { get; }
 
 		/// <summary>
 		/// Return the cumulator value
@@ -58,10 +55,10 @@ namespace SDD.Class
 		public object Résultat => Dessus;
 
 		/// <summary>
-		/// Returns a new CalculatriceAlu based of the current one
+		/// Returns a new Calculatrice based of the current one
 		/// </summary>
 		/// <returns></returns>
-		public new ICalculatrice Cloner() => new CalculatriceAlu(alu, EnTexte());
+		public new ICalculatrice Cloner() => new Calculatrice<T>(alu,EnTexte());
 
 		/// <summary>
 		/// Methods that execute the corresponding command passed by the users. Receives an IEnumerable of commands
@@ -69,7 +66,7 @@ namespace SDD.Class
 		/// <param name="commandes"></param>
 		public void Exécuter(IEnumerable<CalcCommande> commandes)
 		{
-			CalculatriceAlu initialCalc = (CalculatriceAlu)Cloner();
+			Calculatrice<T> initialCalc = (Calculatrice<T>)Cloner();
 			List<CalcCommande> listeCommandes = commandes.Cast<CalcCommande>().ToList();
 
 			foreach (CalcCommande commande in listeCommandes)
@@ -173,7 +170,7 @@ namespace SDD.Class
 		/// <returns></returns>
 		public bool PeutExécuter(CalcCommande commande)
 		{
-			CalculatriceAlu tempCalc = (CalculatriceAlu)Cloner();
+			Calculatrice<T> tempCalc = (Calculatrice<T>)Cloner();
 			try
 			{
 				Exécuter(commande);
@@ -194,18 +191,17 @@ namespace SDD.Class
 		/// 
 		/// </summary>
 		/// <param name="initalCalc"></param>
-		private void RétablirCalculatriceAlu(CalculatriceAlu initalCalc)
+		private void RétablirCalculatrice(Calculatrice<T> initalCalc)
 		{
 			mAccumuleur = initalCalc.mAccumuleur;
 			mPile = initalCalc.mPile;
 		}
 
-
-		private void HandleBackspaceCommand(CalculatriceAlu initialCalc)
+		private void HandleBackspaceCommand(Calculatrice<T> initialCalc)
 		{
 			if (mAccumuleur.EstVide)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new AccumuleurVideException();
 			}
 			else
@@ -216,58 +212,58 @@ namespace SDD.Class
 		/// Method that handle operations that involves two adjacents numbers
 		/// </summary>
 		/// <param name="commande"></param>
-		private void HandleMultipleNumberOperationCommand(CalcCommande commande, CalculatriceAlu initialCalc)
+		private void HandleMultipleNumberOperationCommand(CalcCommande commande, Calculatrice<T> initialCalc)
 		{
 			Push();
 
-			List<int> tempList = Pile.ToList();
+			List<T> tempList = Pile.ToList();
 
 			if (EstVide || tempList.Count <= 1)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
 
-			int result = 0;
-			int firstNumber = 0;
-			int secondNumber = 0;
+			T result = (T) Convert.ChangeType(0, typeof(T));
+			T firstNumber = (T) Convert.ChangeType(0, typeof(T));
+			T secondNumber = (T) Convert.ChangeType(0, typeof(T));
 
-			if (IsInt32(tempList[tempList.Count - 2]))
+			if (IsWithinRange(tempList[tempList.Count - 2]))
 				firstNumber = tempList[tempList.Count - 2];
 			else
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new OverflowException();
 			}
 
-			if (IsInt32(tempList[tempList.Count - 1]))
+			if (IsWithinRange(tempList[tempList.Count - 1]))
 				secondNumber = tempList[tempList.Count - 1];
 			else
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new OverflowException();
 			}
 
 			switch (commande)
 			{
 				case CalcCommande.Addition:
-					Int32.TryParse(alu.Additionner(firstNumber ,secondNumber).ToString(), out result);
+					result = alu.Additionner(firstNumber, secondNumber);
 					break;
 				case CalcCommande.Soustraction:
-					Int32.TryParse(alu.Soustraire(firstNumber,secondNumber).ToString(), out result);
+					result = alu.Soustraire(firstNumber, secondNumber);
 					break;
 				case CalcCommande.Multiplication:
-					Int32.TryParse(alu.Multiplier(firstNumber ,secondNumber).ToString(), out result);
+					result = alu.Multiplier(firstNumber, secondNumber);
 					break;
 				case CalcCommande.DivisionEntière:
-					Int32.TryParse(alu.Diviser(firstNumber , secondNumber).ToString(), out result);
+					result = alu.Diviser(firstNumber, secondNumber);
 					break;
 				case CalcCommande.Modulo:
-					Int32.TryParse(alu.Modulo(firstNumber , secondNumber).ToString(), out result);
+					result = alu.Modulo(firstNumber, secondNumber);
 					break;
 			}
 
-			if (!IsInt32(result)) throw new OverflowException();
+			if (!IsWithinRange(result)) throw new OverflowException();
 
 			tempList.RemoveAt(tempList.Count - 1);
 			tempList[tempList.Count - 1] = result;
@@ -277,19 +273,19 @@ namespace SDD.Class
 		/// <summary>
 		/// Method that handle the square command
 		/// </summary>
-		private void HandleSquareCommand(CalculatriceAlu initialCalc)
+		private void HandleSquareCommand(Calculatrice<T> initialCalc)
 		{
 			if (EstVide)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
 
-			int dessus = alu.Carré((int)Dessus);
+			T dessus = alu.Carré((T)Dessus);
 
-			if (dessus >= Int32.MaxValue || dessus <= Int32.MinValue)
+			if (!IsWithinRange(dessus))
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new OverflowException();
 			}
 
@@ -307,18 +303,19 @@ namespace SDD.Class
 		/// <summary>
 		/// Method that handle the negation command
 		/// </summary>
-		private void HandleNegationCommand(CalculatriceAlu initialCalc)
+
+		private void HandleNegationCommand(Calculatrice<T> initialCalc)
 		{
 			if (EstVide)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new ArgumentException();
 			}
-			int dessus;
+			T dessus;
 
 			if (!String.IsNullOrEmpty(Accumulation))
 			{
-				dessus = alu.Négation((int)mAccumuleur.Extraire());
+				dessus = alu.Négation((T)mAccumuleur.Extraire());
 				mAccumuleur.Reset(dessus, true);
 			}
 			else if (Éléments.Count() > 0)
@@ -342,28 +339,28 @@ namespace SDD.Class
 		/// Method that handle the enter command
 		/// </summary>
 		/// <param name="nullAccepted"></param>
-		private void HandleEnterCommand(CalculatriceAlu initialCalc, bool nullAccepted = true)
+		private void HandleEnterCommand(Calculatrice<T> initialCalc, bool nullAccepted = true)
 		{
-			int? valeur = mAccumuleur.Extraire();
+			T? valeur = mAccumuleur.Extraire();
 
 			if (valeur is null && !nullAccepted)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new AccumuleurVideException();
 			}
 
 			if (valeur != null)
-				Push((int)valeur);
+				Push((T)valeur);
 		}
 
 		/// <summary>
 		/// Method that handle the pop command
 		/// </summary>
-		private void HandlePopCommand(CalculatriceAlu initialCalc)
+		private void HandlePopCommand(Calculatrice<T> initialCalc)
 		{
 			if (EstVide)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
 			Pop();
@@ -372,28 +369,28 @@ namespace SDD.Class
 		/// <summary>
 		/// Method that handle the duplicate command
 		/// </summary>
-		private void HandleDuplicateCommand(CalculatriceAlu initalCalc)
+		private void HandleDuplicateCommand(Calculatrice<T> initalCalc)
 		{
 			if (EstVide)
 			{
-				RétablirCalculatriceAlu(initalCalc);
+				RétablirCalculatrice(initalCalc);
 				throw new PileInsuffisanteException();
 			}
 
-			int? dessus = Dessus;
+			T? dessus = Dessus;
 
 			if (dessus != null)
-				Push((int)dessus);
+				Push((T)dessus);
 		}
 
 		/// <summary>
 		/// Method that handle the swap command
 		/// </summary>
-		private void HandleSwapCommand(CalculatriceAlu initialCalc)
+		private void HandleSwapCommand(Calculatrice<T> initialCalc)
 		{
 			if (EstVide)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
 
@@ -401,14 +398,14 @@ namespace SDD.Class
 
 			if (Éléments.Count() < 2)
 			{
-				RétablirCalculatriceAlu(initialCalc);
+				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
 			else
 			{
-				List<int> tempList = Éléments.Cast<int>().ToList();
-				tempList[tempList.Count - 1] = (int)Éléments.ElementAt(Éléments.Count() - 2);
-				tempList[tempList.Count - 2] = (int)Dessus;
+				List<T> tempList = Éléments.Cast<T>().ToList();
+				tempList[tempList.Count - 1] = (T)Éléments.ElementAt(Éléments.Count() - 2);
+				tempList[tempList.Count - 2] = (T)Dessus;
 				Reset(tempList);
 			}
 

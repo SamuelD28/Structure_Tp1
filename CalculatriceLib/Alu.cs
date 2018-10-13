@@ -5,7 +5,7 @@ namespace CalculatriceLib
 	public class Alu<T> : IAlu<T>
 		where T : struct
 	{
-		public AluGen(Func<T, T> carré, 
+		public Alu(Func<T, T> carré, 
 			Func<T, T> négation, 
 			Func<T, T, T> additionner, 
 			Func<T, T, T> soustraire, 
