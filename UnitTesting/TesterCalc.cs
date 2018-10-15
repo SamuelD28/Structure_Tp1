@@ -236,7 +236,7 @@ namespace SDD
             PeutSeulementPasExécuter("10?", "+-*\\%s");
             PeutSeulementPasExécuter("10  20", "be");
             PeutSeulementPasExécuter("10  20?", "");
-            PeutSeulementPasExécuter("10  0?", "\\%");
+            PeutSeulementPasExécuter("10", "\\%");
             PeutPasExécuter($"10  {MaxValue}?", "0123456789*²+");
             PeutPasExécuter($"-10  {MaxValue}?", "-");
         }
