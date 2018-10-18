@@ -51,13 +51,12 @@ namespace SDD.Class
         {
             char[] separator = new char[] { ' ' };
             string[] strArray = enTexte.ParseStringToArray(separator);
-			T cumulator = ParseCumulator<T>(strArray);
 
-            if (!IsStateStringOkay(strArray))
+            if (!IsStateGenStringOkay(strArray))
                 throw new ArgumentException();
 
             mPile = new PileCalcListeGen<T>(ParsePile<T>(strArray));
-            mAccumuleur = (Equals(cumulator, default(T)))?new AccumuleurGen<T>(): new AccumuleurGen<T>(cumulator);
+            mAccumuleur = new AccumuleurGen<T>(ParseCumulator<T>(strArray));
         }
 
         /// <summary>
@@ -243,9 +242,10 @@ namespace SDD.Class
         /// </summary>
         /// <param name="strArray"></param>
         /// <returns></returns>
-        public static T ParseCumulator<T>(string[] strArray)
+        public static T? ParseCumulator<T>(string[] strArray)
+            where T : struct
         {
-            T cumulatorValue = default(T);
+            T? cumulatorValue = null;
 
             if (strArray is null) return cumulatorValue;
 
@@ -259,5 +259,31 @@ namespace SDD.Class
 
 			return cumulatorValue;
         }
+
+        /// <summary>
+        /// Boolean method that verify that the string used to initiate/reset the state is okay. Return false if not
+        /// </summary>
+        /// <param name="strArray"></param>
+        /// <returns></returns>
+        public static bool IsStateGenStringOkay(string[] strArray)
+        {
+            if (strArray != null)
+            {
+                for (int i = 0; i < strArray.Length; i++)
+                {
+                    string element = strArray.GetValue(i).ToString();
+
+                    if (element.Contains("?") && element.Contains("-"))
+                        return false;
+                    else if (element.Contains("?") && i == 0 && strArray.Length > 1)
+                        return false;
+                    else if (!element.IsNumberSyntaxOkay(true, new char[] { ',', '.' }))
+                        return false;
+                }
+            }
+            return true;
+        }
     }
+
+
 }

@@ -48,7 +48,7 @@ namespace CalculatriceLib
 			carré: a => ((decimal)(Math.Round(Math.Pow((double)a, 2)))),
 			négation: a => checked(a * -1),
 			additionner: (a, b) => checked(a + b),
-			diviser: (a, b) => checked(a / b),
+			diviser: (a, b) => checked(decimal.Truncate(a / b)),
 			modulo: (a, b) => checked(a % b),
 			multiplier: (a, b) => checked(a * b),
 			soustraire: (a, b) => (a - b)

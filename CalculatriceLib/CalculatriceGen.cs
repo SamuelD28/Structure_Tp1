@@ -270,24 +270,40 @@ namespace SDD.Class
 			Reset(tempList);
 		}
 
-		/// <summary>
-		/// Method that handle the square command
-		/// </summary>
-		private void HandleSquareCommand(Calculatrice<T> initialCalc)
+        /// <summary>
+        /// Method that handle the square command
+        /// </summary>
+        private void HandleSquareCommand(Calculatrice<T> initialCalc)
 		{
 			if (EstVide)
 			{
 				RétablirCalculatrice(initialCalc);
 				throw new PileInsuffisanteException();
 			}
-
-			T dessus = alu.Carré((T)Dessus);
-
+            
+			T dessus = (T)Dessus;
+            
 			if (!IsWithinRange(dessus))
 			{
 				RétablirCalculatrice(initialCalc);
 				throw new OverflowException();
 			}
+
+            try
+            {
+                dessus = alu.Carré(dessus);
+            }
+            catch(Exception)
+            {
+                RétablirCalculatrice(initialCalc);
+                throw new OverflowException();
+            }
+
+            if(Comparer<T>.Default.Compare(dessus, default(T)) < 0)
+            {
+                RétablirCalculatrice(initialCalc);
+                throw new OverflowException();
+            }
 
 			if (!String.IsNullOrEmpty(Accumulation))
 			{
